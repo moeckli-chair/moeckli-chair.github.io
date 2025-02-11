@@ -14,6 +14,13 @@
     "text": "Doloremque Laudantium\nSed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.\n\nVoluptatem Quia\nNemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.\n\n© 2025 REPO-NAME. All rights reserved. | Privacy Policy | Terms of Service"
   },
   {
+    "objectID": "tab-tables/tab-tables-index.html",
+    "href": "tab-tables/tab-tables-index.html",
+    "title": "Tab tables",
+    "section": "",
+    "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.\nNemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.\n\nExample of drill down table by Country\n\n\n\n\n\n\n\n\nAdd Instrument version of table"
+  },
+  {
     "objectID": "tab-plots/tab-plots-index.html",
     "href": "tab-plots/tab-plots-index.html",
     "title": "Tab plot",
@@ -21,17 +28,24 @@
     "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.\nNemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.\n\n\n\n\n\nAir Quality"
   },
   {
-    "objectID": "tab-tables/tab-tables-index.html",
-    "href": "tab-tables/tab-tables-index.html",
+    "objectID": "tab-tables/tab-tables-index_old.html",
+    "href": "tab-tables/tab-tables-index_old.html",
     "title": "Tab tables",
     "section": "",
     "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.\nNemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem."
   },
   {
-    "objectID": "tab-tables/tab-tables-index.html#example-of-drill-down-table",
-    "href": "tab-tables/tab-tables-index.html#example-of-drill-down-table",
+    "objectID": "tab-tables/tab-tables-index_old.html#example-of-drill-down-table-by-country",
+    "href": "tab-tables/tab-tables-index_old.html#example-of-drill-down-table-by-country",
     "title": "Tab tables",
-    "section": "Example of drill down table",
-    "text": "Example of drill down table"
+    "section": "Example of drill down table by Country",
+    "text": "Example of drill down table by Country"
+  },
+  {
+    "objectID": "tab-tables/tab-tables-index_old.html#example-of-drill-down-table-by-instrument",
+    "href": "tab-tables/tab-tables-index_old.html#example-of-drill-down-table-by-instrument",
+    "title": "Tab tables",
+    "section": "Example of drill down table by Instrument",
+    "text": "Example of drill down table by Instrument"
   }
 ]
