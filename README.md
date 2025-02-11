@@ -1,3 +1,0 @@
-# README
-
-Add placeholder text.
