@@ -2,12 +2,14 @@ project:
   type: website
 
 website:
-  title: "Quarto dashboard 02"
+  title: "Gitactions website"
   navbar:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
+      - href: tab-one-index.qmd
+        text: Tab-one
+
 
 format:
   html:
