@@ -1,7 +1,5 @@
 ---
 title: "Tab tables"
-editor_options: 
-  chunk_output_type: console
 ---
 
 ```{r load-tables}
@@ -46,58 +44,53 @@ Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor
 
 Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
 
-### Example of drill down table by Country
-
+## Example of drill down table by Country
 ```{r reactable-1}
-# Assuming your dataframe is called 'df'
-# First, create the grouped data for the main table
-grouped_data <- df %>%
-  select(Country, Instrument, Type) %>%
-  unique()
-
-# Create the reactable with nested tables
 reactable(
-  grouped_data,
-  groupBy = c("Country", "Instrument"),
-  columns = list(
-    Country = colDef(width = 150),
-    Instrument = colDef(width = 150),
-    Type = colDef(width = 150)
-  ),
-  details = function(index) {
-    # Get the detailed data for the selected row
-    detail_data <- df %>%
-      filter(
-        Country == grouped_data$Country[index] &
-          Instrument == grouped_data$Instrument[index] &
-          Type == grouped_data$Type[index]
-      ) %>%
-      select(Question, Answer, Information)
-    
-    # Create the nested table
-    htmltools::div(
-      style = "padding: 1rem",
-      reactable(
-        detail_data,
-        columns = list(
-          Question = colDef(width = 200),
-          Answer = colDef(width = 200),
-          #Information = colDef(width = 300),
-          Information = colDef(html = TRUE)
-        ),
-        outlined = TRUE,
-        striped = TRUE,
-        highlight = TRUE,
-        defaultPageSize = 5
-      )
-    )
-  },
-  bordered = TRUE,
+  df,
+  defaultPageSize = 20,
+  groupBy = c("Country", "Instrument", "Type"),
+  searchable = TRUE,
+  striped = TRUE,
   highlight = TRUE,
-  defaultPageSize = 50,
-  striped = TRUE
+  #bordered = TRUE,
+  columns = list(
+    # Make the groupBy columns narrower:
+    Country = colDef(minWidth = 100),
+    Instrument = colDef(minWidth = 100),
+    Type = colDef(minWidth = 100),
+    # Make the "Question" column wider:
+    Question = colDef(minWidth = 250),
+    #Information = colDef(minWidth = 150),
+    # Ensure "Information" column interprets HTML
+    Information = colDef(html = TRUE)
+  )
 )
 
 ```
 
-### Add Instrument version of table
+## Example of drill down table by Instrument
+```{r reactable-2}
+reactable(
+  df,
+  defaultPageSize = 20,
+  groupBy = c("Instrument", "Country", "Type"),
+  searchable = TRUE,
+  striped = TRUE,
+  highlight = TRUE,
+  #bordered = TRUE,
+  columns = list(
+    # Make the groupBy columns narrower:
+    Country = colDef(minWidth = 100),
+    Instrument = colDef(minWidth = 100),
+    Type = colDef(minWidth = 100),
+    # Make the "Question" column wider:
+    Question = colDef(minWidth = 250),
+    #Information = colDef(minWidth = 150),
+    # Ensure "Information" column interprets HTML
+    Information = colDef(html = TRUE)
+  )
+)
+
+```
+
