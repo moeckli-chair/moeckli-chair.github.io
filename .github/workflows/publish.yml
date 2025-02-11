@@ -1,7 +1,8 @@
 on:
   workflow_dispatch:
   push:
-    branches: main
+    branches:
+      - main
 
 name: Quarto Publish
 
@@ -15,20 +16,19 @@ jobs:
         uses: actions/checkout@v4
         
       - name: Install system dependencies
-        # This ensures libcurl is installed so R's 'curl' package can compile
         run: |
-        sudo apt-get update
-        sudo apt-get install -y \
-        libcurl4-openssl-dev \
-        libfontconfig1-dev \
-        libfreetype6-dev \
-        libharfbuzz-dev \
-        libfribidi-dev \
-        libpng-dev \
-        libjpeg-dev \
-        libtiff5-dev \
-        zlib1g-dev
-        
+          sudo apt-get update
+          sudo apt-get install -y \
+            libcurl4-openssl-dev \
+            libfontconfig1-dev \
+            libfreetype6-dev \
+            libharfbuzz-dev \
+            libfribidi-dev \
+            libpng-dev \
+            libjpeg-dev \
+            libtiff5-dev \
+            zlib1g-dev
+
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
