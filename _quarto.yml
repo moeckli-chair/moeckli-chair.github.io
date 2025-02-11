@@ -1,14 +1,21 @@
 project:
   type: website
 
+execute:
+  echo: false     # Hide code blocks
+  warning: false  # Suppress R warnings
+  message: false  # Suppress R messages
+  
 website:
-  title: "Gitactions website"
+  title: "REPO-NAME"
   navbar:
     left:
       - href: index.qmd
         text: Home
-      - href: tab-one/tab-one-index.qmd
-        text: Tab-one
+      - href: tab-plots/tab-plots-index.qmd
+        text: Plots
+      - href: tab-tables/tab-tables-index.qmd
+        text: Tables
     logo: images/logo_tepak.png
 
 format:
