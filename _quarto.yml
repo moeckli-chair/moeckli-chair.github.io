@@ -7,9 +7,9 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: tab-one-index.qmd
+      - href: tab-one/tab-one-index.qmd
         text: Tab-one
-
+    logo: images/logo_tepak.png
 
 format:
   html:
