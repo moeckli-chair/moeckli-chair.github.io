@@ -2,10 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://digipols-admin.github.io/gitactions-lidd-01/index.html</loc>
-    <lastmod>2025-02-11T14:11:30.141Z</lastmod>
+    <lastmod>2025-02-11T16:45:52.895Z</lastmod>
   </url>
   <url>
-    <loc>https://digipols-admin.github.io/gitactions-lidd-01/tab-one/tab-one-index.html</loc>
-    <lastmod>2025-02-11T14:11:30.143Z</lastmod>
+    <loc>https://digipols-admin.github.io/gitactions-lidd-01/tab-plots/tab-plots-index.html</loc>
+    <lastmod>2025-02-11T16:45:52.897Z</lastmod>
+  </url>
+  <url>
+    <loc>https://digipols-admin.github.io/gitactions-lidd-01/tab-tables/tab-tables-index.html</loc>
+    <lastmod>2025-02-11T16:45:52.897Z</lastmod>
   </url>
 </urlset>
