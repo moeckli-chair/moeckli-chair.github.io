@@ -101,3 +101,55 @@ reactable(
 ```
 
 ### Add Instrument version of table
+
+```{r reactable-2}
+# Assuming your dataframe is called 'df'
+# First, create the grouped data for the main table
+grouped_data <- df %>%
+  select(Instrument, Country, Type) %>%
+  unique()
+
+# Create the reactable with nested tables
+reactable(
+  grouped_data,
+  groupBy = c("Instrument", "Country"),
+  columns = list(
+    Country = colDef(width = 150),
+    Instrument = colDef(width = 150),
+    Type = colDef(width = 150)
+  ),
+  details = function(index) {
+    # Get the detailed data for the selected row
+    detail_data <- df %>%
+      filter(
+        Instrument == grouped_data$Instrument[index] &
+        Country == grouped_data$Country[index] &
+          Type == grouped_data$Type[index]
+      ) %>%
+      select(Question, Answer, Information)
+    
+    # Create the nested table
+    htmltools::div(
+      style = "padding: 1rem",
+      reactable(
+        detail_data,
+        columns = list(
+          Question = colDef(width = 200),
+          Answer = colDef(width = 200),
+          #Information = colDef(width = 300),
+          Information = colDef(html = TRUE)
+        ),
+        outlined = TRUE,
+        striped = TRUE,
+        highlight = TRUE,
+        defaultPageSize = 5
+      )
+    )
+  },
+  bordered = TRUE,
+  highlight = TRUE,
+  defaultPageSize = 50,
+  striped = TRUE
+)
+
+```
