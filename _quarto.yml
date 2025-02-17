@@ -7,7 +7,7 @@ execute:
   message: false  # Suppress R messages
   
 website:
-  title: "REPO-NAME"
+  title: "Prof. Moeckli's Chair"
   navbar:
     left:
       - href: index.qmd
