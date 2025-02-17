@@ -12,9 +12,9 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: tab-plots/tab-plots-index.qmd
+      - href: tab-plots/index.qmd
         text: Plots
-      - href: tab-tables/tab-tables-index.qmd
+      - href: tab-tables/index.qmd
         text: Tables
     logo: images/uzh.png
 
