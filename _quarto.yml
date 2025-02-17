@@ -16,7 +16,7 @@ website:
         text: Plots
       - href: tab-tables/tab-tables-index.qmd
         text: Tables
-    logo: images/logo_tepak.png
+    logo: images/uzh.png
 
 format:
   html:
