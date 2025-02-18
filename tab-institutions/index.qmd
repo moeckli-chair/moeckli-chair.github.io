@@ -1,0 +1,189 @@
+---
+title: "LIDD institutions"
+---
+
+```{r load-data-tables}
+library(tidyverse)
+library(reactable)
+library(here)
+long <- read_csv(here("data/long.csv"))
+
+id_vec <- long %>% 
+  filter(is.na(filterCountry)) %>% 
+  distinct(ID) %>% 
+  pull(ID)
+
+df <- long %>%
+  filter(!ID %in% id_vec) %>% 
+  select(Country,Instrument,Type,Question,Answer,Sources,Comment)
+
+df <- df %>%
+  mutate(
+    Information = case_when(
+      !is.na(Sources) & !is.na(Comment) ~ paste0(
+        "<strong>Source:</strong> ", Sources,
+        "<br><strong>Comment:</strong> ", Comment
+      ),
+      !is.na(Sources) & is.na(Comment)  ~ paste0(
+        "<strong>Source:</strong> ", Sources
+      ),
+      is.na(Sources) & !is.na(Comment)  ~ paste0(
+        "<strong>Comment:</strong> ", Comment
+      ),
+      TRUE                              ~ NA_character_
+    )
+  ) %>%
+  relocate(Information, .after = Answer) %>%
+  select(-Sources, -Comment) %>% 
+  drop_na(Answer)
+
+```
+
+Add LIDD INSTITUTIONS introduction here!
+
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
+
+## View data by institution
+
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+
+```{r reactable-institution}
+# First, create the grouped data for the main table
+grouped_data <- df %>%
+  select(Instrument, Country, Type) %>%
+  unique()
+
+# Create the reactable with nested tables
+reactable(
+  grouped_data,
+  groupBy = c("Instrument", "Country"),
+  columns = list(
+    Country = colDef(width = 150),
+    Instrument = colDef(width = 150),
+    Type = colDef(width = 150)
+  ),
+  details = function(index) {
+    # Get the detailed data for the selected row
+    detail_data <- df %>%
+      filter(
+        Instrument == grouped_data$Instrument[index] &
+        Country == grouped_data$Country[index] &
+          Type == grouped_data$Type[index]
+      ) %>%
+      select(Question, Answer, Information)
+    
+    # Create the nested table
+    htmltools::div(
+      style = "padding: 1rem",
+      reactable(
+        detail_data,
+        columns = list(
+          Question = colDef(width = 200),
+          Answer = colDef(width = 200),
+          #Information = colDef(width = 300),
+          Information = colDef(html = TRUE)
+        ),
+        outlined = TRUE,
+        striped = TRUE,
+        highlight = TRUE,
+        defaultPageSize = 5
+      )
+    )
+  },
+  bordered = TRUE,
+  highlight = TRUE,
+  defaultPageSize = 50,
+  striped = TRUE
+)
+
+```
+
+
+## View data by country
+
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+
+```{r reactable-country}
+# First, create the grouped data for the main table
+grouped_data <- df %>%
+  select(Country, Instrument, Type) %>%
+  unique()
+
+# Create the reactable with nested tables
+reactable(
+  grouped_data,
+  groupBy = c("Country", "Instrument"),
+  columns = list(
+    Country = colDef(width = 150),
+    Instrument = colDef(width = 150),
+    Type = colDef(width = 150)
+  ),
+  details = function(index) {
+    # Get the detailed data for the selected row
+    detail_data <- df %>%
+      filter(
+        Country == grouped_data$Country[index] &
+          Instrument == grouped_data$Instrument[index] &
+          Type == grouped_data$Type[index]
+      ) %>%
+      select(Question, Answer, Information)
+    
+    # Create the nested table
+    htmltools::div(
+      style = "padding: 1rem",
+      reactable(
+        detail_data,
+        columns = list(
+          Question = colDef(width = 200),
+          Answer = colDef(width = 200),
+          #Information = colDef(width = 300),
+          Information = colDef(html = TRUE)
+        ),
+        outlined = TRUE,
+        striped = TRUE,
+        highlight = TRUE,
+        defaultPageSize = 5
+      )
+    )
+  },
+  bordered = TRUE,
+  highlight = TRUE,
+  defaultPageSize = 50,
+  striped = TRUE
+)
+
+```
+
+## Annex
+
+```{r tab-plots-load}
+library(ggplot2)
+```
+
+
+```{r tab-plots-plot1}
+#| echo: false
+#| fig-cap: "Air Quality"
+  
+# Create some sample data
+set.seed(123)  # for reproducibility
+data <- data.frame(
+  x = rnorm(50),
+  y = rnorm(50)
+)
+
+# Create basic scatter plot
+plot <- ggplot(data, aes(x = x, y = y)) +
+  geom_point(color = "blue", size = 3) +
+  theme_minimal() +
+  labs(
+    title = "Sample Scatter Plot",
+    x = "X Axis",
+    y = "Y Axis"
+  )
+
+# Display the plot
+print(plot)
+```

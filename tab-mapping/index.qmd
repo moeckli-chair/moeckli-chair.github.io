@@ -1,7 +1,5 @@
 ---
 title: "Tab tables"
-editor_options: 
-  chunk_output_type: console
 ---
 
 ```{r load-tables}

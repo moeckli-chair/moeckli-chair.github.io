@@ -12,16 +12,16 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: tab-plots/index.qmd
-        text: Plots
-      - href: tab-tables/index.qmd
-        text: Tables
-    logo: images/uzh.png
+      - href: tab-institutions/index.qmd
+        text: LIDD Institutions
+      - href: tab-mapping/index.qmd
+        text: LIDD Mapping
+    logo: /images/hex-logo.svg
 
 format:
   html:
     theme:
-      - cosmo
+      - flatly
       - brand
     css: styles.css
     toc: true
