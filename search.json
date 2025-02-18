@@ -1,35 +1,56 @@
 [
   {
-    "objectID": "tab-plots/index.html",
-    "href": "tab-plots/index.html",
-    "title": "Tab plot",
+    "objectID": "tab-institutions/index.html",
+    "href": "tab-institutions/index.html",
+    "title": "LIDD institutions",
     "section": "",
-    "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.\nNemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.\n\n\n\n\n\nAir Quality"
+    "text": "Add LIDD INSTITUTIONS introduction here!\nSed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.\nNemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem."
   },
   {
-    "objectID": "tab-tables/tab-tables-index_old.html",
-    "href": "tab-tables/tab-tables-index_old.html",
+    "objectID": "tab-institutions/index.html#view-data-by-institution",
+    "href": "tab-institutions/index.html#view-data-by-institution",
+    "title": "LIDD institutions",
+    "section": "View data by institution",
+    "text": "View data by institution\nSed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+  },
+  {
+    "objectID": "tab-institutions/index.html#view-data-by-country",
+    "href": "tab-institutions/index.html#view-data-by-country",
+    "title": "LIDD institutions",
+    "section": "View data by country",
+    "text": "View data by country\nSed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+  },
+  {
+    "objectID": "tab-institutions/index.html#annex",
+    "href": "tab-institutions/index.html#annex",
+    "title": "LIDD institutions",
+    "section": "Annex",
+    "text": "Annex\n\n\n\n\n\nAir Quality"
+  },
+  {
+    "objectID": "tab-mapping/tab-tables-index_old.html",
+    "href": "tab-mapping/tab-tables-index_old.html",
     "title": "Tab tables",
     "section": "",
     "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.\nNemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem."
   },
   {
-    "objectID": "tab-tables/tab-tables-index_old.html#example-of-drill-down-table-by-country",
-    "href": "tab-tables/tab-tables-index_old.html#example-of-drill-down-table-by-country",
+    "objectID": "tab-mapping/tab-tables-index_old.html#example-of-drill-down-table-by-country",
+    "href": "tab-mapping/tab-tables-index_old.html#example-of-drill-down-table-by-country",
     "title": "Tab tables",
     "section": "Example of drill down table by Country",
     "text": "Example of drill down table by Country"
   },
   {
-    "objectID": "tab-tables/tab-tables-index_old.html#example-of-drill-down-table-by-instrument",
-    "href": "tab-tables/tab-tables-index_old.html#example-of-drill-down-table-by-instrument",
+    "objectID": "tab-mapping/tab-tables-index_old.html#example-of-drill-down-table-by-instrument",
+    "href": "tab-mapping/tab-tables-index_old.html#example-of-drill-down-table-by-instrument",
     "title": "Tab tables",
     "section": "Example of drill down table by Instrument",
     "text": "Example of drill down table by Instrument"
   },
   {
-    "objectID": "tab-tables/index.html",
-    "href": "tab-tables/index.html",
+    "objectID": "tab-mapping/index.html",
+    "href": "tab-mapping/index.html",
     "title": "Tab tables",
     "section": "",
     "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.\nNemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.\n\nExample of drill down table by Country\n\n\n\n\n\n\n\n\nAdd Instrument version of table"
@@ -37,22 +58,15 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Welcome to Prof. Moeckli’s github page",
+    "title": "Chair for Public Law with a focus on International and Comparative Law",
     "section": "",
-    "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Add a link to a page plots page\nNemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. tables webpage"
-  },
-  {
-    "objectID": "index.html#chair-for-public-law-with-a-focus-on-international-and-comparative-law",
-    "href": "index.html#chair-for-public-law-with-a-focus-on-international-and-comparative-law",
-    "title": "Welcome to Prof. Moeckli’s github page",
-    "section": "",
-    "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Add a link to a page plots page\nNemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. tables webpage"
+    "text": "Add INTRODUCITON!\nSed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Add a link to a page Institutions dataset\nNemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Mapping dataset"
   },
   {
     "objectID": "index.html#doloremque-laudantium",
     "href": "index.html#doloremque-laudantium",
-    "title": "Welcome to Prof. Moeckli’s github page",
+    "title": "Chair for Public Law with a focus on International and Comparative Law",
     "section": "Doloremque Laudantium",
-    "text": "Doloremque Laudantium\nSed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.\n\nVoluptatem Quia\nNemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.\n\n© 2025 REPO-NAME. All rights reserved. | Privacy Policy | Terms of Service"
+    "text": "Doloremque Laudantium\nSed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.\n\nVoluptatem Quia\nNemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.\n\n© 2025 moeckli-chair. All rights reserved. | Privacy Policy | Terms of Service"
   }
 ]
