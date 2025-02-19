@@ -1,153 +1,91 @@
 ---
-title: "Tab tables"
+title: "LIDD Citizens' Initiative Mapping Data"
+html:
+    include-in-header:
+      - text: |
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 ---
-
-```{r load-tables}
-library(tidyverse)
-library(reactable)
-library(here)
-long <- read_csv(here("data/long.csv"))
-
-id_vec <- long %>% 
-  filter(is.na(filterCountry)) %>% 
-  distinct(ID) %>% 
-  pull(ID)
-
-df <- long %>%
-  filter(!ID %in% id_vec) %>% 
-  select(Country,Instrument,Type,Question,Answer,Sources,Comment)
-
-df <- df %>%
-  mutate(
-    Information = case_when(
-      !is.na(Sources) & !is.na(Comment) ~ paste0(
-        "<strong>Source:</strong> ", Sources,
-        "<br><strong>Comment:</strong> ", Comment
-      ),
-      !is.na(Sources) & is.na(Comment)  ~ paste0(
-        "<strong>Source:</strong> ", Sources
-      ),
-      is.na(Sources) & !is.na(Comment)  ~ paste0(
-        "<strong>Comment:</strong> ", Comment
-      ),
-      TRUE                              ~ NA_character_
-    )
-  ) %>%
-  relocate(Information, .after = Answer) %>%
-  select(-Sources, -Comment) %>% 
-  drop_na(Answer)
-
-```
-
 
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
 
+```{r setup-maping}
+library(tidyverse)
+library(reactable)
+library(here)
+df <- read_csv(here("data/raw_02.csv"))
+
+df <- df %>%
+  select(Country,Type,Outcome,ID,Year,Title)
+
+# First get the counts from the original df
+outcome_counts <- df %>%
+  group_by(Country, Type, Outcome) %>%
+  summarise(count = n(), .groups = 'drop')
+
+# Create the grouped data and join with counts
+grouped_data <- df %>%
+  select(Country, Type, Outcome) %>%
+  unique() %>%
+  left_join(outcome_counts, by = c("Country", "Type", "Outcome"))
+
+
+```
+
+### Data tables (grouped by country)
+```{r mapping-country-table}
+# Interactive Table with Row counts
+reactable(
+  grouped_data,
+  groupBy = c("Country", "Type"),
+  columns = list(
+    Country = colDef(width = 150),
+    Type = colDef(width = 150),
+    Outcome = colDef(
+      width = 200,
+      cell = function(value, index) {
+        sprintf("%s (%d)", value, grouped_data$count[index])
+      }
+    ),
+    count = colDef(show = FALSE)
+  ),
+  details = function(index) {
+    detail_data <- df %>%
+      filter(
+        Country == grouped_data$Country[index] &
+          Type == grouped_data$Type[index] &
+          Outcome == grouped_data$Outcome[index]
+      ) %>%
+      select(ID, Year, Title)
+    
+    htmltools::div(
+      style = "padding: 1rem",
+      reactable(
+        detail_data,
+        columns = list(
+          ID = colDef(width = 100),
+          Year = colDef(width = 100),
+          Title = colDef(width = 300)
+        ),
+        outlined = TRUE,
+        striped = TRUE,
+        highlight = TRUE,
+        defaultPageSize = 50
+      )
+    )
+  },
+  bordered = TRUE,
+  highlight = TRUE,
+  defaultPageSize = 50,
+  striped = TRUE
+)
+
+```
+
+
 Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
 
-### Example of drill down table by Country
-
-```{r reactable-1}
-# Assuming your dataframe is called 'df'
-# First, create the grouped data for the main table
-grouped_data <- df %>%
-  select(Country, Instrument, Type) %>%
-  unique()
-
-# Create the reactable with nested tables
-reactable(
-  grouped_data,
-  groupBy = c("Country", "Instrument"),
-  columns = list(
-    Country = colDef(width = 150),
-    Instrument = colDef(width = 150),
-    Type = colDef(width = 150)
-  ),
-  details = function(index) {
-    # Get the detailed data for the selected row
-    detail_data <- df %>%
-      filter(
-        Country == grouped_data$Country[index] &
-          Instrument == grouped_data$Instrument[index] &
-          Type == grouped_data$Type[index]
-      ) %>%
-      select(Question, Answer, Information)
-    
-    # Create the nested table
-    htmltools::div(
-      style = "padding: 1rem",
-      reactable(
-        detail_data,
-        columns = list(
-          Question = colDef(width = 200),
-          Answer = colDef(width = 200),
-          #Information = colDef(width = 300),
-          Information = colDef(html = TRUE)
-        ),
-        outlined = TRUE,
-        striped = TRUE,
-        highlight = TRUE,
-        defaultPageSize = 5
-      )
-    )
-  },
-  bordered = TRUE,
-  highlight = TRUE,
-  defaultPageSize = 50,
-  striped = TRUE
-)
-
-```
-
-### Add Instrument version of table
-
-```{r reactable-2}
-# Assuming your dataframe is called 'df'
-# First, create the grouped data for the main table
-grouped_data <- df %>%
-  select(Instrument, Country, Type) %>%
-  unique()
-
-# Create the reactable with nested tables
-reactable(
-  grouped_data,
-  groupBy = c("Instrument", "Country"),
-  columns = list(
-    Country = colDef(width = 150),
-    Instrument = colDef(width = 150),
-    Type = colDef(width = 150)
-  ),
-  details = function(index) {
-    # Get the detailed data for the selected row
-    detail_data <- df %>%
-      filter(
-        Instrument == grouped_data$Instrument[index] &
-        Country == grouped_data$Country[index] &
-          Type == grouped_data$Type[index]
-      ) %>%
-      select(Question, Answer, Information)
-    
-    # Create the nested table
-    htmltools::div(
-      style = "padding: 1rem",
-      reactable(
-        detail_data,
-        columns = list(
-          Question = colDef(width = 200),
-          Answer = colDef(width = 200),
-          #Information = colDef(width = 300),
-          Information = colDef(html = TRUE)
-        ),
-        outlined = TRUE,
-        striped = TRUE,
-        highlight = TRUE,
-        defaultPageSize = 5
-      )
-    )
-  },
-  bordered = TRUE,
-  highlight = TRUE,
-  defaultPageSize = 50,
-  striped = TRUE
-)
-
-```
+<a href="https://raw.githubusercontent.com/moeckli-chair/moeckli-chair.github.io/main/data/raw_02.csv" 
+   class="btn btn-primary" 
+   download="raw_02.csv">
+   <i class="bi bi-download"></i> Download Data
+</a>  
