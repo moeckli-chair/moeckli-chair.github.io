@@ -41,13 +41,18 @@ df <- df %>%
 
 ```
 
-Add LIDD INSTITUTIONS introduction here!
+This github page houses the main data outputs from the LIDD research project [add information about the ERC]. 
 
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+The dataset builds on the LIDD typology, which covers the seven most prevalent instruments of direct democracy across the Council of Europe states. See the Typology section for further information.
 
-Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
+The basic unit of analysis in the LIDD dataset is the `Country * Instrument` combination. This produces a stacked dataset where a Country row is repeated for each Direct Democracy instrument provided for. For further information on the items and definitions see the Codebook.
 
-## Typology and defintions
+::: {.callout-warning}
+### Missing cases
+The LIDD project focuses on the Council of Europe member states. Six countries have been classified as not providing for direct democracy instruments at the national level. These countries are not included in the LIDD database. The countries are: Belgium; Bosnia and Hercegovina; Cyprus; Czech Republic; Monaco and Norway. 
+:::
+
+## Typology and definitions
 
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
 
@@ -60,7 +65,7 @@ Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
 
 ::: {.callout-note collapse="true"}
-### Defintions of Direct Democracy related instruments
+### Instruments of Direct Democracy: Definitions
 
 ```{r}
 definitions_table <- tribble(
