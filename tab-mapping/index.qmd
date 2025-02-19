@@ -8,14 +8,25 @@ html:
 
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
 
+
 ```{r setup-maping}
 library(tidyverse)
 library(reactable)
 library(here)
 df <- read_csv(here("data/raw_02.csv"))
+outcome_data <- read_csv(here("data/outcome_data.csv"))
+
+df <- df %>% 
+  left_join(outcome_data, by = "Outcome")
+
+unique_scenarios <- df %>% 
+  distinct(Scenario) %>% 
+  pull()
+
+outcome_data <- outcome_data %>% filter(Scenarion %in% unique_scenarios)
 
 df <- df %>%
-  select(Country,Type,Outcome,ID,Year,Title)
+  select(Country,Type,Outcome,ID,Scenario,Year,Title)
 
 # First get the counts from the original df
 outcome_counts <- df %>%
@@ -31,11 +42,30 @@ grouped_data <- df %>%
 
 ```
 
+## Initiative Outcomes
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+
+::: {.callout-note collapse="true"}
+### Outcome Variables and Scenarios for Initiative Data
+```{r}
+reactable(
+  outcome_data,
+  bordered = TRUE,
+  highlight = TRUE,
+  striped = TRUE
+)
+
+```
+:::
+
+
 ### Data descriptives
 
 Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
 
-
+::: {.callout-note collapse="true"}
+### View Data by Country
+```{r}
 ### Data tables (grouped by country)
 ```{r mapping-country-table}
 # Interactive Table with Row counts
@@ -60,7 +90,7 @@ reactable(
           Type == grouped_data$Type[index] &
           Outcome == grouped_data$Outcome[index]
       ) %>%
-      select(ID, Year, Title)
+      select(ID, Year, Scenario, Title)
     
     htmltools::div(
       style = "padding: 1rem",
@@ -69,7 +99,8 @@ reactable(
         columns = list(
           ID = colDef(width = 100),
           Year = colDef(width = 100),
-          Title = colDef(width = 300)
+          Scenario = colDef(width = 300),
+          Title = colDef(width = 400)
         ),
         outlined = TRUE,
         striped = TRUE,
@@ -85,7 +116,7 @@ reactable(
 )
 
 ```
-
+:::
 
 Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
 
@@ -98,16 +129,36 @@ Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed 
 </button>
 
 <script>
-function downloadCSV() {
-  // Create a temporary anchor element
-  const a = document.createElement('a');
-  a.href = 'https://raw.githubusercontent.com/moeckli-chair/moeckli-chair.github.io/main/data/raw_02.csv';
-  a.download = 'raw_02.csv';
-  a.style.display = 'none';
-  
-  // Add to DOM, trigger click, then remove
-  document.body.appendChild(a);
-  a.click();
-  document.body.removeChild(a);
+async function downloadCSV() {
+  try {
+    // Fetch the CSV data
+    const response = await fetch('https://raw.githubusercontent.com/moeckli-chair/moeckli-chair.github.io/main/data/raw_02.csv');
+    const csvData = await response.text();
+    
+    // Create a Blob from the CSV data
+    const blob = new Blob([csvData], { type: 'text/csv;charset=utf-8;' });
+    
+    // Create URL for the Blob
+    const url = URL.createObjectURL(blob);
+    
+    // Create a temporary anchor element
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'raw_02.csv';
+    a.style.display = 'none';
+    
+    // Add to DOM, trigger click, then remove
+    document.body.appendChild(a);
+    a.click();
+    
+    // Clean up
+    setTimeout(() => {
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }, 100);
+  } catch (error) {
+    console.error('Download failed:', error);
+    alert('Download failed. Please try again later.');
+  }
 }
 </script>

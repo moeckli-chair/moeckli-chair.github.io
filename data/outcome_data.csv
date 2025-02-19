@@ -1,0 +1,32 @@
+Outcome,Scenario
+FailedPreSignature,Initiative does not collect enough signatures for registration (afterwards theoretically admissibility test)
+FailedPostSignature,Initiative did not collect enough signatures for a referendum (afterwards theoretically admissibility test)
+PreAdmissible_FailedPostSignature,Initiative is admissible and has enough signatures to get registered but not enough signatures to cause a referendum
+AllAdmissible_FailedPostSignature,"There are no requirements for admissibility, initiative did not get enough signatures"
+Admissible_FailedPreSignature,"Admissibility test is at the same time as control of signatures needed to get registered, initiative would have been admissible but did not get enough signatures"
+Admissible_FailedPostSignature,"Admissibility test is at the same time as control of signatures needed for referendum, initiative would have been admissible but did not get enough signatures"
+AllAdmissible,"There are no requirements for admissibility, initiative got enough signatures"
+PreAdmissibile_SuccPostSignature,Initiative is admissible and collected enough signatures for a referendum afterwards
+PostAdmissible,"Initiative collects enough signatures, initiative is admissible (Admissibility test takes place after signature collection for referendum)"
+PreSig_Admissible,"Admissibility test is at the same time as control of signatures needed to get registered, initiative was admissible and got enough signatures"
+PostSig_Admissible,"Admissibility test is at the same time as control of signatures needed for referendum, initiative was admissible and got enough signatures"
+PostInadmissible,"Initiative collects enough signatures, initiative is inadmissible (Admissibility test takes place after signature collection for referendum)"
+PreInadmissible,"initiative is inadmissible, admissibility test takes place before signature collection for referendum"
+FailedPreSignature_Inadmissible,"Admissibility test is at the same time as control of signatures needed to get registered, both were unsuccessful"
+SuccPreSignature_Inadmissible,"Admissibility test is at the same time as control of signatures need to get registered, initiative was inadmissible"
+FailedPostSignature_Inadmissible,"Admissibility test is at the same time as control of signatures needed for referendum, both were unsuccessful"
+SuccPostSignature_Inadmissible,"Admissibility test is at the same time as control of signatures needed for referendum, initiative was inadmissible"
+Withdrawn,Initiative was withdrawn before full registration
+PreAdmissible_Withdrawn,"initiative is admissible, admissibility test takes place before signature collection, initiative gets withdrawn (after admissibility test)"
+PostAdmissible_Withdrawn,"initiative is admissible, admissibility test takes place after signature collection, initiative gets withdrawn (after admissibility test)"
+PreSignature_Withdrawn,"Initiative got enough signatures to be registered, was withdrawn afterwards"
+Post_Signature_Withdrawn,"Initiative got enough signatures for referendum to take place, was withdrawn after successful signature collection"
+ProcError,"for example: to register an initiative, a fee needs to be paid in the first three months - the initiants did not pay the fee"
+PreAdmissible_ProcError,"Initiative was declared admissible before signature collection for referendum, initiants failed to hand in signature documents in time (example scenario)"
+NA,No further information could be found
+withdrawn_NA,Initiative was withdrawn at a unknown stage
+admissible_NA,Initiative is admissible but no further information was available
+inadmissible_NA,Initiative is inadmissible but no further information was available
+SuccPostSignature_NA,"Initiative collected enough signatures for referendum, no information on admissibility thereafter"
+SuccPreSignature_NA,"Initiative collected enough signatures to get registered, no information afterwards"
+Other,This is a special case. More information is in the comment.
