@@ -16,7 +16,7 @@ website:
         text: LIDD Institutions
       - href: tab-mapping/index.qmd
         text: LIDD Mapping
-    logo: /images/hex-logo.svg
+    logo: images/uzh.png
 
 format:
   html:
