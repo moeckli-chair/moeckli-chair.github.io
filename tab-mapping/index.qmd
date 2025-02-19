@@ -6,6 +6,8 @@ html:
           <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 ---
 
+Add Introduction!
+
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
 
 
@@ -13,6 +15,8 @@ Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor
 library(tidyverse)
 library(reactable)
 library(here)
+library(ggplot2)
+
 df <- read_csv(here("data/raw_02.csv"))
 outcome_data <- read_csv(here("data/outcome_data.csv"))
 
@@ -39,10 +43,82 @@ grouped_data <- df %>%
   unique() %>%
   left_join(outcome_counts, by = c("Country", "Type", "Outcome"))
 
+```
+
+## Types of Citizens' Initiatives
+
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+
+::: {.callout-note collapse="true"}
+### View Typology
+
+![](/images/liddConcept6.png){width="600px" fig-align="centre"}
+
+:::
+
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+
+::: {.callout-note collapse="true"}
+### Types of Citizens' Initiatives
+
+```{r mapping-definitions}
+# Create the data frame from the tab-delimited text
+initiative_data <- tribble(
+  ~`Type of Initiative`, ~`Short Label`, ~Definition,
+  "Proactive initiative", "PI", "Allows a certain number of voters to initiate a referendum and formulate its topic",
+  "Rejective initiative", "RI", "Allows a certain number of voters to initiate a referendum that is aimed at (1) preventing constitutional/legislative provisions from being passed or (2) repealing them.",
+  "Agenda initiative", "AI", "Allows a certain number of voters to put an issue on the agenda of a state organ, typically parliament, but does not lead to a referendum. An Agenda Initiative that is supported by the required number of signatures obliges parliament to deal with the proposal, that is, to decide on it or, at the very least, to debate it."
+  )
+
+
+# Display the data using reactable
+reactable(
+  initiative_data,
+  bordered = TRUE,
+  highlight = TRUE,
+  striped = TRUE,
+  pagination = FALSE,
+  columns = list(
+    `Type of Initiative` = colDef(width = 180),
+    `Short Label` = colDef(width = 100),
+    Definition = colDef(width = 500, minWidth = 300)
+  ),
+  wrap = TRUE,
+  resizable = TRUE
+)
 
 ```
 
-## Initiative Outcomes
+```{r table-code}
+# Compute the count data
+count_data <- df %>% 
+  count(Type) %>%
+  arrange(desc(n))
+
+# JCO-like color palette
+jco_colors <- c("#0073C2FF", "#EFC000FF", "#868686FF")
+
+# Create the ggplot2 barplot
+ggplot(count_data, aes(x = reorder(Type, -n), y = n, fill = Type)) +
+  geom_bar(stat = "identity", width = 0.6, color = "white") +
+  geom_text(aes(label = n), vjust = -0.5, size = 4) +
+  scale_fill_manual(values = jco_colors, 
+                    name = "Type of Citizens' Initiative") +
+  labs(x = "", 
+       y = "Count",
+       title = "Distribution of Citizens' Initiatives",
+       subtitle = "1990-2020"
+       ) +
+  theme_minimal() 
+
+
+```
+:::
+
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+
+
+## Outcomes of Citizens' Initiatives
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
 
 ::: {.callout-note collapse="true"}
@@ -60,7 +136,7 @@ reactable(
 :::
 
 
-### Data descriptives
+## Explore Data
 
 Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
 
@@ -121,7 +197,118 @@ reactable(
 
 Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
 
-### Download dataset
+::: {.callout-note collapse="true"}
+### View Data by Type of Citizen Initiative 
+```{r mapping-type-table}
+### Data tables (grouped by Type)
+# First get the counts from the original df
+outcome_counts <- df %>%
+  group_by(Type, Country, Outcome) %>%
+  summarise(count = n(), .groups = 'drop')
+
+# Create the grouped data and join with counts
+grouped_data <- df %>%
+  select(Type, Country, Outcome) %>%
+  unique() %>%
+  left_join(outcome_counts, by = c("Type","Country","Outcome"))
+
+# Interactive Table with Row counts
+reactable(
+  grouped_data,
+  groupBy = c("Type", "Country"),
+  columns = list(
+    Type = colDef(width = 150),
+    Country = colDef(width = 150),
+    Outcome = colDef(
+      width = 200,
+      cell = function(value, index) {
+        sprintf("%s (%d)", value, grouped_data$count[index])
+      }
+    ),
+    count = colDef(show = FALSE)
+  ),
+  details = function(index) {
+    detail_data <- df %>%
+      filter(
+          Type == grouped_data$Type[index] &
+            Country == grouped_data$Country[index] &
+            Outcome == grouped_data$Outcome[index]
+      ) %>%
+      select(ID, Year, Scenario, Title)
+    
+    htmltools::div(
+      style = "padding: 1rem",
+      reactable(
+        detail_data,
+        columns = list(
+          ID = colDef(width = 100),
+          Year = colDef(width = 100),
+          Scenario = colDef(width = 300),
+          Title = colDef(width = 400)
+        ),
+        outlined = TRUE,
+        striped = TRUE,
+        highlight = TRUE,
+        defaultPageSize = 50
+      )
+    )
+  },
+  bordered = TRUE,
+  highlight = TRUE,
+  defaultPageSize = 50,
+  striped = TRUE
+)
+
+```
+:::
+
+Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+
+## Codebook
+
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
+
+<button class="btn btn-primary" onclick="downloadCSV()">
+  <i class="bi bi-download"></i> Download Codebook
+</button>
+
+<script>
+async function downloadCSV() {
+  try {
+    // Fetch the CSV data
+    const response = await fetch('https://raw.githubusercontent.com/moeckli-chair/moeckli-chair.github.io/main/data/raw_02.csv');
+    const csvData = await response.text();
+    
+    // Create a Blob from the CSV data
+    const blob = new Blob([csvData], { type: 'text/csv;charset=utf-8;' });
+    
+    // Create URL for the Blob
+    const url = URL.createObjectURL(blob);
+    
+    // Create a temporary anchor element
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'raw_02.csv';
+    a.style.display = 'none';
+    
+    // Add to DOM, trigger click, then remove
+    document.body.appendChild(a);
+    a.click();
+    
+    // Clean up
+    setTimeout(() => {
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }, 100);
+  } catch (error) {
+    console.error('Download failed:', error);
+    alert('Download failed. Please try again later.');
+  }
+}
+</script>
+
+
+## Download dataset
 
 Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
 

@@ -2,10 +2,12 @@
 title: "LIDD institutions"
 ---
 
-```{r load-data-tables}
+```{r setup-institutions}
 library(tidyverse)
 library(reactable)
 library(here)
+
+def_table <- read_csv(here("data/summaryDefinition.csv"))
 long <- read_csv(here("data/long.csv"))
 
 id_vec <- long %>% 
@@ -45,9 +47,79 @@ Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor
 
 Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
 
-## View data by institution
+## Typology and defintions
 
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+
+::: {.callout-note collapse="true"}
+### View Typology
+
+![](/images/liddConcept2.png){width="600px" fig-align="centre"}
+:::
+
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+
+::: {.callout-note collapse="true"}
+### Defintions of Direct Democracy related instruments
+
+```{r}
+definitions_table <- tribble(
+  ~Instrument, ~Definition,
+  "Agenda Initiative",   "An instrument that allows a certain number of citizens to put an issue on the agenda of state organs but that does not lead to a referendum (i.e. a popular vote). An agenda initiave mandates the state organ to deal with the proposal: make a decision about it or at least debate it.",
+  "Proactive citizens’ initiative",   "An instrument that allows a certain number of citizens to initiate a referendum and formulate the topic of the referendum.",
+  "Rejective citizens’ initiative", "An instrument that allows a certain number of citizens to initiate a referendum that is aimed at preventing new laws (or parts of them) from being passed or at repealing existing laws (or parts of them).",
+  "Law-initiated referendum", "A referendum that is triggered if certain conditions specified by law (i.e. the constitution or a legislative act) are met. The law may determine the topic (e.g. transfer of sovereignty) or the type of legal act (e.g. constitutional amendment) that triggers the referendum process. The law can either directly require the holding of a referendum or require it in case certain additional conditions are not met (e.g. a constitutional amendment is not passed by a supermajority in parliament). In all cases the referendum is triggered by law rather than initiated by a state organ.",
+    "Legislature-initiated referendum", "A referendum that can be initiated by the legislature (i.e. parliament (or parts of it)). A referendum is initiated by the legislature if the parliament or members of the parliament can start the referendum process by defining the issue for the popular vote. The fact that another state organ may be responsible for calling the referendum (i.e. for making the final decision about it) does not matter. The deciding question is who starts the process.",
+      "Executive-initiated referendum", "A referendum that can be initiated by the executive (i.e. the government (or parts of it)). A referendum is initiated by the executive if the government or other executive actors can start the referendum process by defining the issue for the popular vote. The fact that another state organ may be responsible for calling the referendum (i.e. for making the final decision about it) does not matter. The deciding question is who starts the process.",
+       "Subnational-initiated referendum", "Subnational-initiated referendum A referendum that can be initiated by (a certain number of) subnational entities (regions, provinces, cantons; municipalities). A referendum is initiated by a subnational entity if it can start the referendum process by defining the issue for the popular vote.") 
+
+definitions_table %>% 
+  reactable(
+  bordered = TRUE,
+  highlight = TRUE,
+  striped = TRUE,
+  pagination = FALSE,
+  columns = list(
+    `Instrument` = colDef(width = 150),
+    Definition = colDef(width = 500, minWidth = 300)
+  ),
+  wrap = TRUE,
+  resizable = TRUE
+)
+
+```
+:::
+
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+
+::: {.callout-note collapse="true"}
+## Items and Definitions
+```{r}
+
+def_table %>% 
+  select(-ID) %>% 
+  reactable(
+    groupBy = c("Instrument"),
+    columns = list(
+      Instrument = colDef(width = 150),
+      Item = colDef(width = 300),
+      Definition = colDef(width = 500)),
+    bordered = TRUE,
+    highlight = TRUE,
+    striped = TRUE)
+
+
+```
+:::
+
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+
+## Explore data
+
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+
+::: {.callout-note collapse="true"}
+### View data by institution
 
 ```{r reactable-institution}
 # First, create the grouped data for the main table
@@ -99,11 +171,12 @@ reactable(
 )
 
 ```
-
-
-## View data by country
+:::
 
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+
+::: {.callout-note collapse="true"}
+### View data by country
 
 ```{r reactable-country}
 # First, create the grouped data for the main table
@@ -155,35 +228,93 @@ reactable(
 )
 
 ```
+:::
 
-## Annex
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
 
-```{r tab-plots-load}
-library(ggplot2)
-```
+## Codebook
+
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
+
+<button class="btn btn-primary" onclick="downloadCSV()">
+  <i class="bi bi-download"></i> Download Codebook
+</button>
+
+<script>
+async function downloadCSV() {
+  try {
+    // Fetch the CSV data
+    const response = await fetch('https://raw.githubusercontent.com/moeckli-chair/moeckli-chair.github.io/main/data/summaryDefinition.csv');
+    const csvData = await response.text();
+    
+    // Create a Blob from the CSV data
+    const blob = new Blob([csvData], { type: 'text/csv;charset=utf-8;' });
+    
+    // Create URL for the Blob
+    const url = URL.createObjectURL(blob);
+    
+    // Create a temporary anchor element
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'summaryDefinition.csv';
+    a.style.display = 'none';
+    
+    // Add to DOM, trigger click, then remove
+    document.body.appendChild(a);
+    a.click();
+    
+    // Clean up
+    setTimeout(() => {
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }, 100);
+  } catch (error) {
+    console.error('Download failed:', error);
+    alert('Download failed. Please try again later.');
+  }
+}
+</script>
 
 
-```{r tab-plots-plot1}
-#| echo: false
-#| fig-cap: "Air Quality"
-  
-# Create some sample data
-set.seed(123)  # for reproducibility
-data <- data.frame(
-  x = rnorm(50),
-  y = rnorm(50)
-)
+## Download dataset
 
-# Create basic scatter plot
-plot <- ggplot(data, aes(x = x, y = y)) +
-  geom_point(color = "blue", size = 3) +
-  theme_minimal() +
-  labs(
-    title = "Sample Scatter Plot",
-    x = "X Axis",
-    y = "Y Axis"
-  )
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
 
-# Display the plot
-print(plot)
-```
+<button class="btn btn-primary" onclick="downloadCSV()">
+  <i class="bi bi-download"></i> Download Data
+</button>
+
+<script>
+async function downloadCSV() {
+  try {
+    // Fetch the CSV data
+    const response = await fetch('https://raw.githubusercontent.com/moeckli-chair/moeckli-chair.github.io/main/data/long.csv');
+    const csvData = await response.text();
+    
+    // Create a Blob from the CSV data
+    const blob = new Blob([csvData], { type: 'text/csv;charset=utf-8;' });
+    
+    // Create URL for the Blob
+    const url = URL.createObjectURL(blob);
+    
+    // Create a temporary anchor element
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'long.csv';
+    a.style.display = 'none';
+    
+    // Add to DOM, trigger click, then remove
+    document.body.appendChild(a);
+    a.click();
+    
+    // Clean up
+    setTimeout(() => {
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }, 100);
+  } catch (error) {
+    console.error('Download failed:', error);
+    alert('Download failed. Please try again later.');
+  }
+}
+</script>
