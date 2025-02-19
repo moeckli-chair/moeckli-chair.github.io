@@ -23,7 +23,7 @@ unique_scenarios <- df %>%
   distinct(Scenario) %>% 
   pull()
 
-outcome_data <- outcome_data %>% filter(Scenarion %in% unique_scenarios)
+outcome_data <- outcome_data %>% filter(Scenario %in% unique_scenarios)
 
 df <- df %>%
   select(Country,Type,Outcome,ID,Scenario,Year,Title)
@@ -52,7 +52,8 @@ reactable(
   outcome_data,
   bordered = TRUE,
   highlight = TRUE,
-  striped = TRUE
+  striped = TRUE,
+  pagination = FALSE
 )
 
 ```
