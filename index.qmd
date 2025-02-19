@@ -5,7 +5,7 @@ title: "Chair for Public Law with a focus on International and Comparative Law"
 ::: {.grid}
 ::: {.g-col-8}
 
-Add INTRODUCITON!
+Add an INTRODUCITON!
 
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Add a link to a page [Institutions dataset](tab-plots/index.qmd)
 
