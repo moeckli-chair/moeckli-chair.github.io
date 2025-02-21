@@ -5,7 +5,7 @@ title: "Chair for Public Law with a focus on International and Comparative Law"
 ::: {.grid}
 ::: {.g-col-8}
 
-Add an INTRODUCITON!
+Daniel shoudl add an INTRODUCITON!
 
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Add a link to a page [Institutions dataset](tab-institutions/index.qmd). Add a link to a pdf [forward slash](/data/supplemental_material.pdf). Add a link to a pdf [without forward slash](data/supplemental_material.pdf)
 
