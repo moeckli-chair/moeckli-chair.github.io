@@ -7,7 +7,7 @@ title: "Chair for Public Law with a focus on International and Comparative Law"
 
 Add an INTRODUCITON!
 
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Add a link to a page [Institutions dataset](tab-plots/index.qmd)
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Add a link to a page [Institutions dataset](tab-institutions/index.qmd). Add a link to a pdf [forward slash](/data/supplemental_material.pdf). Add a link to a pdf [without forward slash](data/supplemental_material.pdf)
 
 Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. [Mapping dataset](tab-mapping/index.qmd)
 
