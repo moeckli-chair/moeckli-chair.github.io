@@ -7,16 +7,16 @@ execute:
   message: false  # Suppress R messages
   
 website:
-  title: "Prof. Moeckli's Chair"
+  title: "Daniel Moeckli's Chair"
   navbar:
     left:
       - href: index.qmd
         text: Home
       - href: tab-institutions/index.qmd
-        text: LIDD Institutions
+        text: Institutions
       - href: tab-mapping/index.qmd
-        text: LIDD Mapping
-    logo: images/uzh.png
+        text: Initiatives
+    #logo: images/uzh.png
 
 format:
   html:
