@@ -1,4 +1,4 @@
-Outcome,Scenario
+Outcome,Definition
 FailedPreSignature,Initiative does not collect enough signatures for registration (afterwards theoretically admissibility test)
 FailedPostSignature,Initiative did not collect enough signatures for a referendum (afterwards theoretically admissibility test)
 PreAdmissible_FailedPostSignature,Initiative is admissible and has enough signatures to get registered but not enough signatures to cause a referendum

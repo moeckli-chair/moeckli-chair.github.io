@@ -1,14 +1,12 @@
 ---
-title: "LIDD Citizens' Initiative Mapping Data"
+title: "Initiatives"
 html:
     include-in-header:
       - text: |
           <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 ---
 
-Add Introduction!!
-
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+This webpage houses key data on citizens’ initiatives launched at the national level across the 46 member states of the Council of Europe from 1990 to 2020\. The data encompasses information on the types of initiatives, their admissibility, and the signature collection process, offering insights into the actual practice and outcomes of these democratic processes. The data was collected as part of our [LIDD project](https://lidd-project.org).
 
 
 ```{r setup-maping}
@@ -24,13 +22,13 @@ df <- df %>%
   left_join(outcome_data, by = "Outcome")
 
 unique_scenarios <- df %>% 
-  distinct(Scenario) %>% 
+  distinct(Definition) %>% 
   pull()
 
-outcome_data <- outcome_data %>% filter(Scenario %in% unique_scenarios)
+outcome_data <- outcome_data %>% filter(Definition %in% unique_scenarios)
 
 df <- df %>%
-  select(Country,Type,Outcome,ID,Scenario,Year,Title)
+  select(Country,Type,Outcome,ID,Definition,Year,Title)
 
 # First get the counts from the original df
 outcome_counts <- df %>%
@@ -47,19 +45,11 @@ grouped_data <- df %>%
 
 ## Types of Citizens' Initiatives
 
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
-
-::: {.callout-note collapse="true"}
-### View Typology
+In our conceptual framework, we categorize direct-democratic instruments into two primary types: top-down when the process is initiated by institutions and bottom-up when it is initiated by citizens. We identify four types of top-down initiated referendums (that is, popular votes), three triggered by institutional bodies (legislature, executive, and subnational entities) and one automatically triggered when certain conditions specified by law are met, such as a referendum requirement for ratifying constitutional amendments. The bottom-up category comprises two instruments that trigger a popular vote (proactive initiative and rejective initiative) and one that does not (agenda initiative).
 
 ![](/images/liddConcept6.png){width="600px" fig-align="centre"}
 
-:::
-
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
-
-::: {.callout-note collapse="true"}
-### Types of Citizens' Initiatives
+### Types of bottom-up instruments (citizens' initiatives)
 
 ```{r mapping-definitions}
 # Create the data frame from the tab-delimited text
@@ -89,6 +79,19 @@ reactable(
 
 ```
 
+## Distribution of bottom-up instruments
+Slightly over 70 percent of the Council of Europe member states (33 out of 46) possess at least one form of bottom-up instrument of direct democracy, with some countries having multiple. The PI exists in 20 Council of Europe states, the RI in nine, the AI in 28.
+
+## Mapping initiative practice
+
+Out of the 57 bottom-up instruments that exist in the Council of Europe member states, 17 could not be included in our database. Some instruments could not be included due to the absence of implementation. For example, although the Greek constitution was amended to provide for an AI in 2019, the law required to implement this instrument has not been passed yet. Other instruments were not included because it was impossible to find any information (e.g. for the AI in Armenia), or we considered the information we identified to be unreliable (e.g. for the PI in Poland). Our database thus contains information on 40 instruments.
+
+We applied an inclusion criterion that led to the removal of further eight instruments. Since our empirical goal is to map initiative practice in terms of trends and various outcomes, we excluded those instruments that have been used fewer than five times during the 31 years covered. Where citizens’ initiatives are launched so rarely, there is no meaningful practice to be analysed. This applied to the PI in Albania (n=1), Portugal (n=3), and Serbia (n=2); the RI in Albania (n=2), Luxembourg (n=1), and Malta (n=1); and the AI in Azerbaijan (n=1) and Liechtenstein (n=2). The [Supplemental Material](data/supplemental_material.pdf) provides full details on the instruments that did not satisfy the inclusion criteria as well as those that were included. It also provides details on the cases that were included despite only partial data being available. 
+
+Overall, our database includes information on how 32 bottom-up instruments of direct democracy  have been used in practice, yielding a total of 6,874 citizens’ initiatives launched between 1990 and 2020\.
+
+::: {.callout-note collapse="true"}
+## Distribution of citizens’ initiatives
 ```{r table-code}
 # Compute the count data
 count_data <- df %>% 
@@ -115,14 +118,12 @@ ggplot(count_data, aes(x = reorder(Type, -n), y = n, fill = Type)) +
 ```
 :::
 
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
-
 
 ## Outcomes of Citizens' Initiatives
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+Before a citizens’ initiative can be put to a referendum or, in the case of the AI, on the agenda of parliament, it normally needs to surmount two important hurdles. First, it needs to pass an admissibility test, that is, a test to determine whether it meets certain legal requirements to proceed. Second, it needs to collect sufficient signatures. The admissibility test can be conducted either before the collection of signatures, acting as a preliminary filter, or after signatures have been gathered, offering a later stage of scrutiny. Our database includes information on both these stages, resulting in various possible outcomes of the initiative process.
 
 ::: {.callout-note collapse="true"}
-### Outcome Variables and Scenarios for Initiative Data
+### Outcome variables and their definition
 ```{r}
 reactable(
   outcome_data,
@@ -138,10 +139,10 @@ reactable(
 
 ## Explore Data
 
-Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
+Below, you can explore the data by country and by instrument.
 
 ::: {.callout-note collapse="true"}
-### View Data by Country
+### View data by country
 ```{r}
 ### Data tables (grouped by country)
 ```{r mapping-country-table}
@@ -167,7 +168,7 @@ reactable(
           Type == grouped_data$Type[index] &
           Outcome == grouped_data$Outcome[index]
       ) %>%
-      select(ID, Year, Scenario, Title)
+      select(ID, Year, Definition, Title)
     
     htmltools::div(
       style = "padding: 1rem",
@@ -176,7 +177,7 @@ reactable(
         columns = list(
           ID = colDef(width = 100),
           Year = colDef(width = 100),
-          Scenario = colDef(width = 300),
+          Definition = colDef(width = 300),
           Title = colDef(width = 400)
         ),
         outlined = TRUE,
@@ -195,10 +196,8 @@ reactable(
 ```
 :::
 
-Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-
 ::: {.callout-note collapse="true"}
-### View Data by Type of Citizen Initiative 
+### View data by instrument
 ```{r mapping-type-table}
 ### Data tables (grouped by Type)
 # First get the counts from the original df
@@ -234,7 +233,7 @@ reactable(
             Country == grouped_data$Country[index] &
             Outcome == grouped_data$Outcome[index]
       ) %>%
-      select(ID, Year, Scenario, Title)
+      select(ID, Year, Definition, Title)
     
     htmltools::div(
       style = "padding: 1rem",
@@ -243,7 +242,7 @@ reactable(
         columns = list(
           ID = colDef(width = 100),
           Year = colDef(width = 100),
-          Scenario = colDef(width = 300),
+          Definition = colDef(width = 300),
           Title = colDef(width = 400)
         ),
         outlined = TRUE,
@@ -262,58 +261,54 @@ reactable(
 ```
 :::
 
-Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
-
 ## Codebook
 
-Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
+The codebook and further information on data collection is available by accessing the [Supplemental Material](data/supplemental_material.pdf) file.
 
-<button class="btn btn-primary" onclick="downloadCSV()">
-  <i class="bi bi-download"></i> Download Codebook
-</button>
+<!-- <button class="btn btn-primary" onclick="downloadCSV()"> -->
+<!--   <i class="bi bi-download"></i> Download Codebook -->
+<!-- </button> -->
 
-<script>
-async function downloadCSV() {
-  try {
-    // Fetch the CSV data
-    const response = await fetch('https://raw.githubusercontent.com/moeckli-chair/moeckli-chair.github.io/main/data/raw_02.csv');
-    const csvData = await response.text();
-    
-    // Create a Blob from the CSV data
-    const blob = new Blob([csvData], { type: 'text/csv;charset=utf-8;' });
-    
-    // Create URL for the Blob
-    const url = URL.createObjectURL(blob);
-    
-    // Create a temporary anchor element
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'raw_02.csv';
-    a.style.display = 'none';
-    
-    // Add to DOM, trigger click, then remove
-    document.body.appendChild(a);
-    a.click();
-    
-    // Clean up
-    setTimeout(() => {
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);
-    }, 100);
-  } catch (error) {
-    console.error('Download failed:', error);
-    alert('Download failed. Please try again later.');
-  }
-}
-</script>
+<!-- <script> -->
+<!-- async function downloadCSV() { -->
+<!--   try { -->
+<!--     // Fetch the CSV data -->
+<!--     const response = await fetch('https://raw.githubusercontent.com/moeckli-chair/moeckli-chair.github.io/main/data/raw_02.csv'); -->
+<!--     const csvData = await response.text(); -->
+
+<!--     // Create a Blob from the CSV data -->
+<!--     const blob = new Blob([csvData], { type: 'text/csv;charset=utf-8;' }); -->
+
+<!--     // Create URL for the Blob -->
+<!--     const url = URL.createObjectURL(blob); -->
+
+<!--     // Create a temporary anchor element -->
+<!--     const a = document.createElement('a'); -->
+<!--     a.href = url; -->
+<!--     a.download = 'raw_02.csv'; -->
+<!--     a.style.display = 'none'; -->
+
+<!--     // Add to DOM, trigger click, then remove -->
+<!--     document.body.appendChild(a); -->
+<!--     a.click(); -->
+
+<!--     // Clean up -->
+<!--     setTimeout(() => { -->
+<!--       document.body.removeChild(a); -->
+<!--       URL.revokeObjectURL(url); -->
+<!--     }, 100); -->
+<!--   } catch (error) { -->
+<!--     console.error('Download failed:', error); -->
+<!--     alert('Download failed. Please try again later.'); -->
+<!--   } -->
+<!-- } -->
+<!-- </script> -->
 
 
 ## Download dataset
 
-Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-
 <button class="btn btn-primary" onclick="downloadCSV()">
-  <i class="bi bi-download"></i> Download Data
+  <i class="bi bi-download"></i> Download .csv file
 </button>
 
 <script>

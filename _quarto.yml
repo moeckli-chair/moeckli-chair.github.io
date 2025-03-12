@@ -13,7 +13,7 @@ website:
       - href: index.qmd
         text: Home
       - href: tab-institutions/index.qmd
-        text: Institutions
+        text: Instruments
       - href: tab-mapping/index.qmd
         text: Initiatives
     #logo: images/uzh.png
