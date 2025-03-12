@@ -1,32 +1,20 @@
----
-title: "Chair for Public Law with a focus on International and Comparative Law"
----
+## Our research on direct democracy
 
-::: {.grid}
-::: {.g-col-8}
+Growing dissatisfaction with traditional representative democracy has prompted scholars as well as policy-makers to explore alternative forms of civic engagement and decision-making. Among the most promising alternatives are instruments of direct democracy. As digital advancements reshape how citizens interact among themselves and with the authorities, direct-democratic instruments have gained new prominence in recent years. Offering both direct and semi-direct avenues for influencing policy, they are positioning themselves as significant democratic innovations.
 
-Daniel shoudl add an INTRODUCITON!
+The team of [Daniel Moeckli's Chair for Public Law with a focus on International and Comparative Law at the University of Zurich](https://www.ivr.uzh.ch/en/institutsmitglieder/moeckli.html) explores direct-democratic mechanisms primarily from a comparative perspective. We often apply an interdisciplinary lens, combining ‘traditional’ legal methods with qualitative and quantitative methods that are more commonly used in other social sciences, especially in political science. Our major research project [‘Popular Sovereignty vs the Rule of Law? Defining the Limits of Direct Democracy’ (LIDD)](http://lidd-project.org), funded through an ERC Consolidator Grant, was based on this approach. We continue to analyse direct-democratic institutions and practices, adopting a variety of perspectives and integrating different methods. 
 
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Add a link to a page [Institutions dataset](tab-institutions/index.qmd). Add a link to a pdf [click here](data/supplemental_material.pdf)
+This website presents the most important sets of data we have collected as part of our various research projects relating to direct democracy. These concern the regulation of the different [Instruments](https://moeckli-chair.github.io/tab-institutions/) of direct democracy and the practice of citizens’ [Initiatives](https://moeckli-chair.github.io/tab-mapping/).
 
-Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. [Mapping dataset](tab-mapping/index.qmd)
+Our work on direct democracy aligns with the Chair's overall research agenda to explore issues related to fundamental rights and democracy from the perspectives of comparative constitutional law and international law, applying innovative combinations of promising research methods.
 
-:::
+## Publications
 
-::: {.g-col-4}
-![Lehrstuhl Moeckli](images/hex-logo.svg){width="200px" fig-align="center"}
-<!-- ![](images/home3.png){.center width="70%" style="border-radius: 8px;"} -->
-:::
-:::
+Daniel Moeckli, [Das populistische Verständnis von (direkter) Demokratie als Herausforderung für den Rechtsstaat](https://www.ivr.uzh.ch/dam/jcr:dd495331-4ac4-437c-a5fa-fadc5a9861aa/Moeckli_ZSR-I_2022-05_pdf.pdf), 141 (2022) *Zeitschrift für Schweizerisches Recht*, 593-610 
 
-## Doloremque Laudantium
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+Daniel Moeckli, [Referendums: Tyranny of the Majority?](https://onlinelibrary.wiley.com/doi/epdf/10.1111/spsr.12317), (2018) 24(3) Swiss Political Science Review, 335-341
 
-### Voluptatem Quia
-Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-
-
-
+Daniel Moeckli/Anna Forgács/Henri Ibi (eds), [*The Legal Limits of Direct Democracy: A Comparative Analysis of Referendums and Initiatives across Europe*](https://www.elgaronline.com/edcollbook-oa/edcoll/9781800372795/9781800372795.xml) (Cheltenham: Edward Elgar) (2021)  
 
 
 ::: {.footer style="text-align: left; padding: 1rem; margin-top: 10rem;"}

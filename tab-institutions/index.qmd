@@ -41,20 +41,21 @@ df <- df %>%
 
 ```
 
-This github page houses the main data outputs from the LIDD research project [add information about the ERC]. 
-
-The dataset builds on the LIDD typology, which covers the seven most prevalent instruments of direct democracy across the Council of Europe states. See the Typology section for further information.
-
-The basic unit of analysis in the LIDD dataset is the `Country * Instrument` combination. This produces a stacked dataset where a Country row is repeated for each Direct Democracy instrument provided for. For further information on the items and definitions see the Codebook.
+This webpage houses key data on the legal regulation of the various types of direct-democratic instruments that exist at the national level across the 46 member states of the Council of Europe. The data was collected as part of our [LIDD project](https://lidd-project.org).
 
 ::: {.callout-warning}
 ### Missing cases
-The LIDD project focuses on the Council of Europe member states. Six countries have been classified as not providing for direct democracy instruments at the national level. These countries are not included in the LIDD database. The countries are: Belgium; Bosnia and Hercegovina; Cyprus; Czech Republic; Monaco and Norway. 
+Six out of the 46 Council of Europe states have been classified as not providing for any instrument of direct democracy at the national level. These states are not included in the database. They are: Belgium, Bosnia and Herzegovina, Cyprus, Czech Republic, Monaco, and Norway.
+ 
 :::
 
 ## Typology and definitions
 
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+### Direct-democratic instruments: Typology
+
+Insert diagram from our landscape paper here
+
+In our conceptual framework, we categorize direct-democratic instruments into two primary types: top-down when the process is initiated by institutions and bottom-up when it is initiated by citizens. We identify four types of top-down initiated referendums (that is, popular votes), three triggered by institutional bodies (legislature, executive, and subnational entities) and one automatically triggered when certain conditions specified by law are met, such as a referendum requirement for ratifying constitutional amendments. The bottom-up category comprises two instruments that trigger a popular vote (proactive initiative and rejective initiative) and one that does not (agenda initiative).
 
 ::: {.callout-note collapse="true"}
 ### View Typology
