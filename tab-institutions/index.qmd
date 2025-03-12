@@ -1,5 +1,5 @@
 ---
-title: "LIDD institutions"
+title: "Instruments"
 ---
 
 ```{r setup-institutions}
@@ -46,6 +46,7 @@ This webpage houses key data on the legal regulation of the various types of dir
 ::: {.callout-warning}
 ### Missing cases
 Six out of the 46 Council of Europe states have been classified as not providing for any instrument of direct democracy at the national level. These states are not included in the database. They are: Belgium, Bosnia and Herzegovina, Cyprus, Czech Republic, Monaco, and Norway.
+
  
 :::
 
@@ -53,31 +54,25 @@ Six out of the 46 Council of Europe states have been classified as not providing
 
 ### Direct-democratic instruments: Typology
 
-Insert diagram from our landscape paper here
-
 In our conceptual framework, we categorize direct-democratic instruments into two primary types: top-down when the process is initiated by institutions and bottom-up when it is initiated by citizens. We identify four types of top-down initiated referendums (that is, popular votes), three triggered by institutional bodies (legislature, executive, and subnational entities) and one automatically triggered when certain conditions specified by law are met, such as a referendum requirement for ratifying constitutional amendments. The bottom-up category comprises two instruments that trigger a popular vote (proactive initiative and rejective initiative) and one that does not (agenda initiative).
 
-::: {.callout-note collapse="true"}
-### View Typology
+The conceptual framework is visualised in the image below (for further information see the definitions).
 
 ![](/images/liddConcept6.png){width="600px" fig-align="centre"}
-:::
-
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
 
 ::: {.callout-note collapse="true"}
-### Instruments of Direct Democracy: Definitions
+### Direct-democratic instruments: Definitions
 
 ```{r}
 definitions_table <- tribble(
   ~Instrument, ~Definition,
-  "Agenda Initiative",   "An instrument that allows a certain number of citizens to put an issue on the agenda of state organs but that does not lead to a referendum (i.e. a popular vote). An agenda initiave mandates the state organ to deal with the proposal: make a decision about it or at least debate it.",
-  "Proactive citizens’ initiative",   "An instrument that allows a certain number of citizens to initiate a referendum and formulate the topic of the referendum.",
-  "Rejective citizens’ initiative", "An instrument that allows a certain number of citizens to initiate a referendum that is aimed at preventing new laws (or parts of them) from being passed or at repealing existing laws (or parts of them).",
-  "Law-initiated referendum", "A referendum that is triggered if certain conditions specified by law (i.e. the constitution or a legislative act) are met. The law may determine the topic (e.g. transfer of sovereignty) or the type of legal act (e.g. constitutional amendment) that triggers the referendum process. The law can either directly require the holding of a referendum or require it in case certain additional conditions are not met (e.g. a constitutional amendment is not passed by a supermajority in parliament). In all cases the referendum is triggered by law rather than initiated by a state organ.",
     "Legislature-initiated referendum", "A referendum that can be initiated by the legislature (i.e. parliament (or parts of it)). A referendum is initiated by the legislature if the parliament or members of the parliament can start the referendum process by defining the issue for the popular vote. The fact that another state organ may be responsible for calling the referendum (i.e. for making the final decision about it) does not matter. The deciding question is who starts the process.",
       "Executive-initiated referendum", "A referendum that can be initiated by the executive (i.e. the government (or parts of it)). A referendum is initiated by the executive if the government or other executive actors can start the referendum process by defining the issue for the popular vote. The fact that another state organ may be responsible for calling the referendum (i.e. for making the final decision about it) does not matter. The deciding question is who starts the process.",
-       "Subnational-initiated referendum", "Subnational-initiated referendum A referendum that can be initiated by (a certain number of) subnational entities (regions, provinces, cantons; municipalities). A referendum is initiated by a subnational entity if it can start the referendum process by defining the issue for the popular vote.") 
+       "Subnational-initiated referendum", "Subnational-initiated referendum A referendum that can be initiated by (a certain number of) subnational entities (regions, provinces, cantons; municipalities). A referendum is initiated by a subnational entity if it can start the referendum process by defining the issue for the popular vote.",
+    "Law-initiated referendum", "A referendum that is triggered if certain conditions specified by law (i.e. the constitution or a legislative act) are met. The law may determine the topic (e.g. transfer of sovereignty) or the type of legal act (e.g. constitutional amendment) that triggers the referendum process. The law can either directly require the holding of a referendum or require it in case certain additional conditions are not met (e.g. a constitutional amendment is not passed by a supermajority in parliament). In all cases the referendum is triggered by law rather than initiated by a state organ.",
+  "Agenda Initiative",   "An instrument that allows a certain number of citizens to put an issue on the agenda of state organs but that does not lead to a referendum (i.e. a popular vote). An agenda initiave mandates the state organ to deal with the proposal: make a decision about it or at least debate it.",
+  "Proactive initiative",   "An instrument that allows a certain number of citizens to initiate a referendum and formulate the topic of the referendum.",
+  "Rejective initiative", "An instrument that allows a certain number of citizens to initiate a referendum that is aimed at preventing new laws (or parts of them) from being passed or at repealing existing laws (or parts of them).") 
 
 definitions_table %>% 
   reactable(
@@ -96,36 +91,17 @@ definitions_table %>%
 ```
 :::
 
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+## Summaries
 
-::: {.callout-note collapse="true"}
-## Items and Definitions
-```{r}
-
-def_table %>% 
-  select(-ID) %>% 
-  reactable(
-    groupBy = c("Instrument"),
-    columns = list(
-      Instrument = colDef(width = 150),
-      Item = colDef(width = 300),
-      Definition = colDef(width = 500)),
-    bordered = TRUE,
-    highlight = TRUE,
-    striped = TRUE)
-
-
-```
-:::
-
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+To be added !!
 
 ## Explore data
 
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+As explained above, we distinguish between seven types of instruments of direct democracy. Our basic unit of analysis is the Country * Instrument combination. For each Country * Instrument combination, we have collected information on between 42 and 72 items, depending on the instrument. For further information on the items and definitions see the Codebook section. This produces a stacked dataset where a country row is repeated for each instrument provided for. Below, you can explore the data by instrument and by country. 
+
 
 ::: {.callout-note collapse="true"}
-### View data by institution
+### View data by instrument
 
 ```{r reactable-institution}
 # First, create the grouped data for the main table
@@ -179,11 +155,9 @@ reactable(
 ```
 :::
 
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
 
 ::: {.callout-note collapse="true"}
 ### View data by country
-
 ```{r reactable-country}
 # First, create the grouped data for the main table
 grouped_data <- df %>%
@@ -236,58 +210,77 @@ reactable(
 ```
 :::
 
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+
 
 ## Codebook
 
-Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
+The database is structured according to a detailed list of items for each instrument. You can view the list of items and defintions in the box below or [download the codebook](https://raw.githubusercontent.com/moeckli-chair/moeckli-chair.github.io/main/data/summaryDefinition.csv){download="summaryDefinition.csv"} as a .csv file. 
 
-<button class="btn btn-primary" onclick="downloadCSV()">
-  <i class="bi bi-download"></i> Download Codebook
-</button>
 
-<script>
-async function downloadCSV() {
-  try {
-    // Fetch the CSV data
-    const response = await fetch('https://raw.githubusercontent.com/moeckli-chair/moeckli-chair.github.io/main/data/summaryDefinition.csv');
-    const csvData = await response.text();
-    
-    // Create a Blob from the CSV data
-    const blob = new Blob([csvData], { type: 'text/csv;charset=utf-8;' });
-    
-    // Create URL for the Blob
-    const url = URL.createObjectURL(blob);
-    
-    // Create a temporary anchor element
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'summaryDefinition.csv';
-    a.style.display = 'none';
-    
-    // Add to DOM, trigger click, then remove
-    document.body.appendChild(a);
-    a.click();
-    
-    // Clean up
-    setTimeout(() => {
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);
-    }, 100);
-  } catch (error) {
-    console.error('Download failed:', error);
-    alert('Download failed. Please try again later.');
-  }
-}
-</script>
+::: {.callout-note collapse="true"}
+## Items and Definitions
+```{r}
+
+def_table %>% 
+  select(-ID) %>% 
+  reactable(
+    groupBy = c("Instrument"),
+    columns = list(
+      Instrument = colDef(width = 150),
+      Item = colDef(width = 300),
+      Definition = colDef(width = 500)),
+    bordered = TRUE,
+    highlight = TRUE,
+    striped = TRUE)
+
+```
+:::
+
+
+<!-- <button class="btn btn-primary" onclick="downloadCSV()"> -->
+<!--   <i class="bi bi-download"></i> Download Codebook -->
+<!-- </button> -->
+
+<!-- <script> -->
+<!-- async function downloadCSV() { -->
+<!--   try { -->
+<!--     // Fetch the CSV data -->
+<!--     const response = await fetch('https://raw.githubusercontent.com/moeckli-chair/moeckli-chair.github.io/main/data/summaryDefinition.csv'); -->
+<!--     const csvData = await response.text(); -->
+
+<!--     // Create a Blob from the CSV data -->
+<!--     const blob = new Blob([csvData], { type: 'text/csv;charset=utf-8;' }); -->
+
+<!--     // Create URL for the Blob -->
+<!--     const url = URL.createObjectURL(blob); -->
+
+<!--     // Create a temporary anchor element -->
+<!--     const a = document.createElement('a'); -->
+<!--     a.href = url; -->
+<!--     a.download = 'summaryDefinition.csv'; -->
+<!--     a.style.display = 'none'; -->
+
+<!--     // Add to DOM, trigger click, then remove -->
+<!--     document.body.appendChild(a); -->
+<!--     a.click(); -->
+
+<!--     // Clean up -->
+<!--     setTimeout(() => { -->
+<!--       document.body.removeChild(a); -->
+<!--       URL.revokeObjectURL(url); -->
+<!--     }, 100); -->
+<!--   } catch (error) { -->
+<!--     console.error('Download failed:', error); -->
+<!--     alert('Download failed. Please try again later.'); -->
+<!--   } -->
+<!-- } -->
+<!-- </script> -->
 
 
 ## Download dataset
 
-Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-
 <button class="btn btn-primary" onclick="downloadCSV()">
-  <i class="bi bi-download"></i> Download Data
+  <i class="bi bi-download"></i> Download .csv file
 </button>
 
 <script>
