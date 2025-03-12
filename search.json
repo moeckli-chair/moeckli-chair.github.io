@@ -65,36 +65,43 @@
   {
     "objectID": "tab-institutions/index.html",
     "href": "tab-institutions/index.html",
-    "title": "LIDD institutions",
+    "title": "Instruments",
     "section": "",
     "text": "This webpage houses key data on the legal regulation of the various types of direct-democratic instruments that exist at the national level across the 46 member states of the Council of Europe. The data was collected as part of our LIDD project."
   },
   {
     "objectID": "tab-institutions/index.html#typology-and-definitions",
     "href": "tab-institutions/index.html#typology-and-definitions",
-    "title": "LIDD institutions",
+    "title": "Instruments",
     "section": "Typology and definitions",
-    "text": "Typology and definitions\n\nDirect-democratic instruments: Typology\nInsert diagram from our landscape paper here\nIn our conceptual framework, we categorize direct-democratic instruments into two primary types: top-down when the process is initiated by institutions and bottom-up when it is initiated by citizens. We identify four types of top-down initiated referendums (that is, popular votes), three triggered by institutional bodies (legislature, executive, and subnational entities) and one automatically triggered when certain conditions specified by law are met, such as a referendum requirement for ratifying constitutional amendments. The bottom-up category comprises two instruments that trigger a popular vote (proactive initiative and rejective initiative) and one that does not (agenda initiative).\n\n\n\n\n\n\nView Typology\n\n\n\n\n\n\n\n\n\n\n\n\n\nSed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.\n\n\n\n\n\n\nInstruments of Direct Democracy: Definitions\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.\n\n\n\n\n\n\nItems and Definitions\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+    "text": "Typology and definitions\n\nDirect-democratic instruments: Typology\nIn our conceptual framework, we categorize direct-democratic instruments into two primary types: top-down when the process is initiated by institutions and bottom-up when it is initiated by citizens. We identify four types of top-down initiated referendums (that is, popular votes), three triggered by institutional bodies (legislature, executive, and subnational entities) and one automatically triggered when certain conditions specified by law are met, such as a referendum requirement for ratifying constitutional amendments. The bottom-up category comprises two instruments that trigger a popular vote (proactive initiative and rejective initiative) and one that does not (agenda initiative).\nThe conceptual framework is visualised in the image below (for further information see the definitions).\n\n\n\n\n\n\n\n\n\n\n\nDirect-democratic instruments: Definitions"
+  },
+  {
+    "objectID": "tab-institutions/index.html#summaries",
+    "href": "tab-institutions/index.html#summaries",
+    "title": "Instruments",
+    "section": "Summaries",
+    "text": "Summaries\nTo be added !!"
   },
   {
     "objectID": "tab-institutions/index.html#explore-data",
     "href": "tab-institutions/index.html#explore-data",
-    "title": "LIDD institutions",
+    "title": "Instruments",
     "section": "Explore data",
-    "text": "Explore data\nSed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.\n\n\n\n\n\n\nView data by institution\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.\n\n\n\n\n\n\nView data by country\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+    "text": "Explore data\nAs explained above, we distinguish between seven types of instruments of direct democracy. Our basic unit of analysis is the Country * Instrument combination. For each Country * Instrument combination, we have collected information on between 42 and 72 items, depending on the instrument. For further information on the items and definitions see the Codebook section. This produces a stacked dataset where a country row is repeated for each instrument provided for. Below, you can explore the data by instrument and by country.\n\n\n\n\n\n\nView data by instrument\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nView data by country"
   },
   {
     "objectID": "tab-institutions/index.html#codebook",
     "href": "tab-institutions/index.html#codebook",
-    "title": "LIDD institutions",
+    "title": "Instruments",
     "section": "Codebook",
-    "text": "Codebook\nNemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.\n\n Download Codebook"
+    "text": "Codebook\nThe database is structured according to a detailed list of items for each instrument. You can view the list of items and defintions in the box below or download the codebook as a .csv file.\n\n\n\n\n\n\nItems and Definitions"
   },
   {
     "objectID": "tab-institutions/index.html#download-dataset",
     "href": "tab-institutions/index.html#download-dataset",
-    "title": "LIDD institutions",
+    "title": "Instruments",
     "section": "Download dataset",
-    "text": "Download dataset\nNemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.\n\n Download Data"
+    "text": "Download dataset\n\n Download .csv file"
   }
 ]
