@@ -6,8 +6,7 @@ html:
           <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 ---
 
-This webpage houses key data on citizens’ initiatives launched at the national level across the 46 member states of the Council of Europe from 1990 to 2020\. The data encompasses information on the types of initiatives, their admissibility, and the signature collection process, offering insights into the actual practice and outcomes of these democratic processes. The data was collected as part of our [LIDD project](https://lidd-project.org).
-
+This webpage houses key data on citizens’ initiatives launched at the national level across the 46 member states of the Council of Europe from 1990 to 2020\. The data encompasses information on the types of initiatives, their admissibility, and the signature collection process, offering insights into the actual practice and outcomes of these democratic processes. The focus is on three types of instruments, the agenda initiative (AI), the proactive initiative (PI) and the rejective initiative (RI). For further information see the Conceptual framework section of this website.
 
 ```{r setup-maping}
 library(tidyverse)
@@ -40,42 +39,6 @@ grouped_data <- df %>%
   select(Country, Type, Outcome) %>%
   unique() %>%
   left_join(outcome_counts, by = c("Country", "Type", "Outcome"))
-
-```
-
-## Types of Citizens' Initiatives
-
-In our conceptual framework, we categorize direct-democratic instruments into two primary types: top-down when the process is initiated by institutions and bottom-up when it is initiated by citizens. We identify four types of top-down initiated referendums (that is, popular votes), three triggered by institutional bodies (legislature, executive, and subnational entities) and one automatically triggered when certain conditions specified by law are met, such as a referendum requirement for ratifying constitutional amendments. The bottom-up category comprises two instruments that trigger a popular vote (proactive initiative and rejective initiative) and one that does not (agenda initiative).
-
-![](/images/liddConcept6.png){width="600px" fig-align="centre"}
-
-### Types of bottom-up instruments (citizens' initiatives)
-
-```{r mapping-definitions}
-# Create the data frame from the tab-delimited text
-initiative_data <- tribble(
-  ~`Type of Initiative`, ~`Short Label`, ~Definition,
-  "Proactive initiative", "PI", "Allows a certain number of voters to initiate a referendum and formulate its topic",
-  "Rejective initiative", "RI", "Allows a certain number of voters to initiate a referendum that is aimed at (1) preventing constitutional/legislative provisions from being passed or (2) repealing them.",
-  "Agenda initiative", "AI", "Allows a certain number of voters to put an issue on the agenda of a state organ, typically parliament, but does not lead to a referendum. An Agenda Initiative that is supported by the required number of signatures obliges parliament to deal with the proposal, that is, to decide on it or, at the very least, to debate it."
-  )
-
-
-# Display the data using reactable
-reactable(
-  initiative_data,
-  bordered = TRUE,
-  highlight = TRUE,
-  striped = TRUE,
-  pagination = FALSE,
-  columns = list(
-    `Type of Initiative` = colDef(width = 180),
-    `Short Label` = colDef(width = 100),
-    Definition = colDef(width = 500, minWidth = 300)
-  ),
-  wrap = TRUE,
-  resizable = TRUE
-)
 
 ```
 
@@ -141,8 +104,9 @@ reactable(
 
 Below, you can explore the data by country and by instrument.
 
+### By Country
 ::: {.callout-note collapse="true"}
-### View data by country
+### View data
 ```{r}
 ### Data tables (grouped by country)
 ```{r mapping-country-table}
@@ -196,8 +160,9 @@ reactable(
 ```
 :::
 
+### By Instrument
 ::: {.callout-note collapse="true"}
-### View data by instrument
+### View data
 ```{r mapping-type-table}
 ### Data tables (grouped by Type)
 # First get the counts from the original df
@@ -342,6 +307,42 @@ async function downloadCSV() {
   } catch (error) {
     console.error('Download failed:', error);
     alert('Download failed. Please try again later.');
+  }
+}
+</script>
+
+## How to Cite
+<button class="btn btn-primary" onclick="toggleCitation()">
+  <i class="bi bi-quote"></i> How to Cite
+</button>
+
+<div id="citation-popup" style="display: none; margin-top: 15px; padding: 15px; background-color: #f8f9fa; border-radius: 5px; border: 1px solid #dee2e6;">
+  <h4>Citation</h4>
+  <p>Moeckli, Daniel., Mendez, Fernando., Labud, Mara., and Reimann, Nils. (Forthcoming) Mapping the European Landscape of Citizens’ Initiatives. <em>Political Studies</em>, 0(0).</p>
+  
+  <h4>BibTeX</h4>
+  <div>
+```bibtex
+@article{moeckli_mendez_forthcoming,
+  author = {Moeckli, Daniel., Mendez, Fernando., Labud, Mara., and Reimann, Nils},
+  title = {Mapping the European Landscape of Citizens’ Initiatives},
+  journal = {Political Studies},
+  volume = {0},
+  number = {0},
+  year = {Forthcoming},
+  doi = {},
+}
+```
+  </div>
+</div>
+
+<script>
+function toggleCitation() {
+  const popup = document.getElementById('citation-popup');
+  if (popup.style.display === 'none') {
+    popup.style.display = 'block';
+  } else {
+    popup.style.display = 'none';
   }
 }
 </script>

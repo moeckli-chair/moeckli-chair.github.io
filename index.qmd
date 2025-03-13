@@ -1,6 +1,20 @@
-## Our research on direct democracy
+---
+title: "Our research on direct democracy"
+---
+
+::: {.grid}
+::: {.g-col-8}
 
 Growing dissatisfaction with traditional representative democracy has prompted scholars as well as policy-makers to explore alternative forms of civic engagement and decision-making. Among the most promising alternatives are instruments of direct democracy. As digital advancements reshape how citizens interact among themselves and with the authorities, direct-democratic instruments have gained new prominence in recent years. Offering both direct and semi-direct avenues for influencing policy, they are positioning themselves as significant democratic innovations.
+
+:::
+
+::: {.g-col-4}
+
+![Direct Democaracy](images/hex-logo.svg){width="220px" fig-align="center"}
+<!-- ![](images/home3.png){.center width="70%" style="border-radius: 8px;"} -->
+:::
+:::
 
 The team of [Daniel Moeckli's Chair for Public Law with a focus on International and Comparative Law at the University of Zurich](https://www.ivr.uzh.ch/en/institutsmitglieder/moeckli.html) explores direct-democratic mechanisms primarily from a comparative perspective. We often apply an interdisciplinary lens, combining ‘traditional’ legal methods with qualitative and quantitative methods that are more commonly used in other social sciences, especially in political science. Our major research project [‘Popular Sovereignty vs the Rule of Law? Defining the Limits of Direct Democracy’ (LIDD)](http://lidd-project.org), funded through an ERC Consolidator Grant, was based on this approach. We continue to analyse direct-democratic institutions and practices, adopting a variety of perspectives and integrating different methods. 
 

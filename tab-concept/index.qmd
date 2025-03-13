@@ -1,0 +1,90 @@
+---
+title: "Conceptual Framework"
+---
+
+```{r setup-concept}
+library(tidyverse)
+library(reactable)
+library(here)
+
+def_table <- read_csv(here("data/summaryDefinition.csv"))
+long <- read_csv(here("data/long.csv"))
+
+id_vec <- long %>% 
+  filter(is.na(filterCountry)) %>% 
+  distinct(ID) %>% 
+  pull(ID)
+
+df <- long %>%
+  filter(!ID %in% id_vec) %>% 
+  select(Country,Instrument,Type,Question,Answer,Sources,Comment)
+
+df <- df %>%
+  mutate(
+    Information = case_when(
+      !is.na(Sources) & !is.na(Comment) ~ paste0(
+        "<strong>Source:</strong> ", Sources,
+        "<br><strong>Comment:</strong> ", Comment
+      ),
+      !is.na(Sources) & is.na(Comment)  ~ paste0(
+        "<strong>Source:</strong> ", Sources
+      ),
+      is.na(Sources) & !is.na(Comment)  ~ paste0(
+        "<strong>Comment:</strong> ", Comment
+      ),
+      TRUE                              ~ NA_character_
+    )
+  ) %>%
+  relocate(Information, .after = Answer) %>%
+  select(-Sources, -Comment) %>% 
+  drop_na(Answer)
+
+```
+
+This webpage houses key data on the legal regulation of the various types of direct-democratic instruments that exist at the national level across the 46 member states of the Council of Europe. It also contains key data on citizens’ initiatives launched at the national level across the member states of the Council of Europe from 1990 to 2020. The data was collected as part of our [LIDD project](https://lidd-project.org) project. This section of the website presents the conceptual framework that underpinned the study. 
+
+## Direct Democracy Typology and Definitions
+
+### Direct-democratic instruments: Typology
+
+In our conceptual framework, we categorize direct-democratic instruments into two primary types: top-down when the process is initiated by institutions and bottom-up when it is initiated by citizens. We identify four types of top-down initiated referendums (that is, popular votes), three triggered by institutional bodies (legislature, executive, and subnational entities) and one automatically triggered when certain conditions specified by law are met, such as a referendum requirement for ratifying constitutional amendments. The bottom-up category comprises two instruments that trigger a popular vote (proactive initiative and rejective initiative) and one that does not (agenda initiative).
+
+The typology is presented in the image below (for further information see the definitions).
+
+![](/images/liddConcept6.png){width="600px" fig-align="centre"}
+
+
+### Direct-democratic instruments: Definitions
+
+```{r concept-definitions}
+definitions_table <- tribble(
+  ~Instrument, ~Type, ~Definition,
+    "Legislature-initiated referendum", "Top-Down", "A referendum that can be initiated by the legislature (i.e. parliament (or parts of it)). A referendum is initiated by the legislature if the parliament or members of the parliament can start the referendum process by defining the issue for the popular vote. The fact that another state organ may be responsible for calling the referendum (i.e. for making the final decision about it) does not matter. The deciding question is who starts the process.",
+      "Executive-initiated referendum", "Top-Down", "A referendum that can be initiated by the executive (i.e. the government (or parts of it)). A referendum is initiated by the executive if the government or other executive actors can start the referendum process by defining the issue for the popular vote. The fact that another state organ may be responsible for calling the referendum (i.e. for making the final decision about it) does not matter. The deciding question is who starts the process.",
+       "Subnational-initiated referendum", "Top-Down", "Subnational-initiated referendum A referendum that can be initiated by (a certain number of) subnational entities (regions, provinces, cantons; municipalities). A referendum is initiated by a subnational entity if it can start the referendum process by defining the issue for the popular vote.",
+    "Law-initiated referendum", "Top-Down", "A referendum that is triggered if certain conditions specified by law (i.e. the constitution or a legislative act) are met. The law may determine the topic (e.g. transfer of sovereignty) or the type of legal act (e.g. constitutional amendment) that triggers the referendum process. The law can either directly require the holding of a referendum or require it in case certain additional conditions are not met (e.g. a constitutional amendment is not passed by a supermajority in parliament). In all cases the referendum is triggered by law rather than initiated by a state organ.",
+  "Agenda Initiative", "Bottom-Up", "An instrument that allows a certain number of citizens to put an issue on the agenda of state organs but that does not lead to a referendum (i.e. a popular vote). An agenda initiave mandates the state organ to deal with the proposal: make a decision about it or at least debate it.",
+  "Proactive initiative", "Bottom-Up", "An instrument that allows a certain number of citizens to initiate a referendum and formulate the topic of the referendum.",
+  "Rejective initiative", "Bottom-Up", "An instrument that allows a certain number of citizens to initiate a referendum that is aimed at preventing new laws (or parts of them) from being passed or at repealing existing laws (or parts of them).") 
+
+definitions_table %>% 
+  reactable(
+  bordered = TRUE,
+  highlight = TRUE,
+  striped = TRUE,
+  pagination = FALSE,
+  columns = list(
+    `Instrument` = colDef(width = 150),
+    Definition = colDef(width = 500, minWidth = 300)
+  ),
+  wrap = TRUE,
+  resizable = TRUE
+)
+
+```
+
+
+## Summaries
+
+To be added !!
+

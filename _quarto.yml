@@ -10,8 +10,10 @@ website:
   title: "Daniel Moeckli's Chair"
   navbar:
     left:
-      - href: index.qmd
-        text: Home
+      #- href: index.qmd
+      #  text: Home
+      - href: tab-concept/index.qmd
+        text: Conceptual Framework
       - href: tab-institutions/index.qmd
         text: Instruments
       - href: tab-mapping/index.qmd
