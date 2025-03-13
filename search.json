@@ -4,14 +4,7 @@
     "href": "tab-mapping/index.html",
     "title": "Initiatives",
     "section": "",
-    "text": "This webpage houses key data on citizens’ initiatives launched at the national level across the 46 member states of the Council of Europe from 1990 to 2020. The data encompasses information on the types of initiatives, their admissibility, and the signature collection process, offering insights into the actual practice and outcomes of these democratic processes. The data was collected as part of our LIDD project."
-  },
-  {
-    "objectID": "tab-mapping/index.html#types-of-citizens-initiatives",
-    "href": "tab-mapping/index.html#types-of-citizens-initiatives",
-    "title": "Initiatives",
-    "section": "Types of Citizens’ Initiatives",
-    "text": "Types of Citizens’ Initiatives\nIn our conceptual framework, we categorize direct-democratic instruments into two primary types: top-down when the process is initiated by institutions and bottom-up when it is initiated by citizens. We identify four types of top-down initiated referendums (that is, popular votes), three triggered by institutional bodies (legislature, executive, and subnational entities) and one automatically triggered when certain conditions specified by law are met, such as a referendum requirement for ratifying constitutional amendments. The bottom-up category comprises two instruments that trigger a popular vote (proactive initiative and rejective initiative) and one that does not (agenda initiative).\n\n\n\n\n\n\nTypes of bottom-up instruments (citizens’ initiatives)"
+    "text": "This webpage houses key data on citizens’ initiatives launched at the national level across the 46 member states of the Council of Europe from 1990 to 2020. The data encompasses information on the types of initiatives, their admissibility, and the signature collection process, offering insights into the actual practice and outcomes of these democratic processes. The focus is on three types of instruments, the agenda initiative (AI), the proactive initiative (PI) and the rejective initiative (RI). For further information see the Conceptual framework section of this website."
   },
   {
     "objectID": "tab-mapping/index.html#distribution-of-bottom-up-instruments",
@@ -39,7 +32,7 @@
     "href": "tab-mapping/index.html#explore-data",
     "title": "Initiatives",
     "section": "Explore Data",
-    "text": "Explore Data\nBelow, you can explore the data by country and by instrument.\n\n\n\n\n\n\nView data by country\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nView data by instrument"
+    "text": "Explore Data\nBelow, you can explore the data by country and by instrument.\n\nBy Country\n\n\n\n\n\n\nView data\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBy Instrument\n\n\n\n\n\n\nView data"
   },
   {
     "objectID": "tab-mapping/index.html#codebook",
@@ -56,23 +49,44 @@
     "text": "Download dataset\n\n Download .csv file"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Daniel Moeckli's Chair",
-    "section": "",
-    "text": "Growing dissatisfaction with traditional representative democracy has prompted scholars as well as policy-makers to explore alternative forms of civic engagement and decision-making. Among the most promising alternatives are instruments of direct democracy. As digital advancements reshape how citizens interact among themselves and with the authorities, direct-democratic instruments have gained new prominence in recent years. Offering both direct and semi-direct avenues for influencing policy, they are positioning themselves as significant democratic innovations.\nThe team of Daniel Moeckli’s Chair for Public Law with a focus on International and Comparative Law at the University of Zurich explores direct-democratic mechanisms primarily from a comparative perspective. We often apply an interdisciplinary lens, combining ‘traditional’ legal methods with qualitative and quantitative methods that are more commonly used in other social sciences, especially in political science. Our major research project ‘Popular Sovereignty vs the Rule of Law? Defining the Limits of Direct Democracy’ (LIDD), funded through an ERC Consolidator Grant, was based on this approach. We continue to analyse direct-democratic institutions and practices, adopting a variety of perspectives and integrating different methods.\nThis website presents the most important sets of data we have collected as part of our various research projects relating to direct democracy. These concern the regulation of the different Instruments of direct democracy and the practice of citizens’ Initiatives.\nOur work on direct democracy aligns with the Chair’s overall research agenda to explore issues related to fundamental rights and democracy from the perspectives of comparative constitutional law and international law, applying innovative combinations of promising research methods."
+    "objectID": "tab-mapping/index.html#how-to-cite",
+    "href": "tab-mapping/index.html#how-to-cite",
+    "title": "Initiatives",
+    "section": "How to Cite",
+    "text": "How to Cite\n\n How to Cite\n\n\n\nCitation\n\n\nMoeckli, Daniel., Mendez, Fernando., Labud, Mara., and Reimann, Nils. (Forthcoming) Mapping the European Landscape of Citizens’ Initiatives. Political Studies, 0(0).\n\n\nBibTeX\n\n\n@article{moeckli_mendez_forthcoming,\n  author = {Moeckli, Daniel., Mendez, Fernando., Labud, Mara., and Reimann, Nils},\n  title = {Mapping the European Landscape of Citizens’ Initiatives},\n  journal = {Political Studies},\n  volume = {0},\n  number = {0},\n  year = {Forthcoming},\n  doi = {},\n}"
   },
   {
-    "objectID": "index.html#our-research-on-direct-democracy",
-    "href": "index.html#our-research-on-direct-democracy",
-    "title": "Daniel Moeckli's Chair",
+    "objectID": "tab-concept/index.html",
+    "href": "tab-concept/index.html",
+    "title": "Conceptual Framework",
+    "section": "",
+    "text": "This webpage houses key data on the legal regulation of the various types of direct-democratic instruments that exist at the national level across the 46 member states of the Council of Europe. It also contains key data on citizens’ initiatives launched at the national level across the member states of the Council of Europe from 1990 to 2020. The data was collected as part of our LIDD project project. This section of the website presents the conceptual framework that underpinned the study."
+  },
+  {
+    "objectID": "tab-concept/index.html#direct-democracy-typology-and-definitions",
+    "href": "tab-concept/index.html#direct-democracy-typology-and-definitions",
+    "title": "Conceptual Framework",
+    "section": "Direct Democracy Typology and Definitions",
+    "text": "Direct Democracy Typology and Definitions\n\nDirect-democratic instruments: Typology\nIn our conceptual framework, we categorize direct-democratic instruments into two primary types: top-down when the process is initiated by institutions and bottom-up when it is initiated by citizens. We identify four types of top-down initiated referendums (that is, popular votes), three triggered by institutional bodies (legislature, executive, and subnational entities) and one automatically triggered when certain conditions specified by law are met, such as a referendum requirement for ratifying constitutional amendments. The bottom-up category comprises two instruments that trigger a popular vote (proactive initiative and rejective initiative) and one that does not (agenda initiative).\nThe typology is presented in the image below (for further information see the definitions).\n\n\n\n\n\n\n\nDirect-democratic instruments: Definitions"
+  },
+  {
+    "objectID": "tab-concept/index.html#summaries",
+    "href": "tab-concept/index.html#summaries",
+    "title": "Conceptual Framework",
+    "section": "Summaries",
+    "text": "Summaries\nTo be added !!"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Our research on direct democracy",
     "section": "",
     "text": "Growing dissatisfaction with traditional representative democracy has prompted scholars as well as policy-makers to explore alternative forms of civic engagement and decision-making. Among the most promising alternatives are instruments of direct democracy. As digital advancements reshape how citizens interact among themselves and with the authorities, direct-democratic instruments have gained new prominence in recent years. Offering both direct and semi-direct avenues for influencing policy, they are positioning themselves as significant democratic innovations.\nThe team of Daniel Moeckli’s Chair for Public Law with a focus on International and Comparative Law at the University of Zurich explores direct-democratic mechanisms primarily from a comparative perspective. We often apply an interdisciplinary lens, combining ‘traditional’ legal methods with qualitative and quantitative methods that are more commonly used in other social sciences, especially in political science. Our major research project ‘Popular Sovereignty vs the Rule of Law? Defining the Limits of Direct Democracy’ (LIDD), funded through an ERC Consolidator Grant, was based on this approach. We continue to analyse direct-democratic institutions and practices, adopting a variety of perspectives and integrating different methods.\nThis website presents the most important sets of data we have collected as part of our various research projects relating to direct democracy. These concern the regulation of the different Instruments of direct democracy and the practice of citizens’ Initiatives.\nOur work on direct democracy aligns with the Chair’s overall research agenda to explore issues related to fundamental rights and democracy from the perspectives of comparative constitutional law and international law, applying innovative combinations of promising research methods."
   },
   {
     "objectID": "index.html#publications",
     "href": "index.html#publications",
-    "title": "Daniel Moeckli's Chair",
+    "title": "Our research on direct democracy",
     "section": "Publications",
     "text": "Publications\nDaniel Moeckli, Das populistische Verständnis von (direkter) Demokratie als Herausforderung für den Rechtsstaat, 141 (2022) Zeitschrift für Schweizerisches Recht, 593-610\nDaniel Moeckli, Referendums: Tyranny of the Majority?, (2018) 24(3) Swiss Political Science Review, 335-341\nDaniel Moeckli/Anna Forgács/Henri Ibi (eds), The Legal Limits of Direct Democracy: A Comparative Analysis of Referendums and Initiatives across Europe (Cheltenham: Edward Elgar) (2021)\n\n© 2025 moeckli-chair. All rights reserved. | Privacy Policy | Terms of Service"
   },
@@ -81,28 +95,14 @@
     "href": "tab-institutions/index.html",
     "title": "Instruments",
     "section": "",
-    "text": "This webpage houses key data on the legal regulation of the various types of direct-democratic instruments that exist at the national level across the 46 member states of the Council of Europe. The data was collected as part of our LIDD project."
-  },
-  {
-    "objectID": "tab-institutions/index.html#typology-and-definitions",
-    "href": "tab-institutions/index.html#typology-and-definitions",
-    "title": "Instruments",
-    "section": "Typology and definitions",
-    "text": "Typology and definitions\n\nDirect-democratic instruments: Typology\nIn our conceptual framework, we categorize direct-democratic instruments into two primary types: top-down when the process is initiated by institutions and bottom-up when it is initiated by citizens. We identify four types of top-down initiated referendums (that is, popular votes), three triggered by institutional bodies (legislature, executive, and subnational entities) and one automatically triggered when certain conditions specified by law are met, such as a referendum requirement for ratifying constitutional amendments. The bottom-up category comprises two instruments that trigger a popular vote (proactive initiative and rejective initiative) and one that does not (agenda initiative).\nThe conceptual framework is visualised in the image below (for further information see the definitions).\n\n\n\n\n\n\n\n\n\n\n\nDirect-democratic instruments: Definitions"
-  },
-  {
-    "objectID": "tab-institutions/index.html#summaries",
-    "href": "tab-institutions/index.html#summaries",
-    "title": "Instruments",
-    "section": "Summaries",
-    "text": "Summaries\nTo be added !!"
+    "text": "This setion of the website provides access to key data on the legal regulation of the various types of direct-democratic instruments that exist at the national level across the 46 member states of the Council of Europe."
   },
   {
     "objectID": "tab-institutions/index.html#explore-data",
     "href": "tab-institutions/index.html#explore-data",
     "title": "Instruments",
     "section": "Explore data",
-    "text": "Explore data\nAs explained above, we distinguish between seven types of instruments of direct democracy. Our basic unit of analysis is the Country * Instrument combination. For each Country * Instrument combination, we have collected information on between 42 and 72 items, depending on the instrument. For further information on the items and definitions see the Codebook section. This produces a stacked dataset where a country row is repeated for each instrument provided for. Below, you can explore the data by instrument and by country.\n\n\n\n\n\n\nView data by instrument\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nView data by country"
+    "text": "Explore data\nWe distinguish between seven types of instruments of direct democracy. Our basic unit of analysis is the Country * Instrument combination. For each Country * Instrument combination, we have collected information on between 42 and 72 items, depending on the instrument. For further information on the items and definitions see the Codebook section. This produces a stacked dataset where a country row is repeated for each instrument provided for. Below, you can explore the data by instrument and by country.\n\nBy Instrument\n\n\n\n\n\n\nView data\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBy Country\n\n\n\n\n\n\nView data"
   },
   {
     "objectID": "tab-institutions/index.html#codebook",
@@ -117,5 +117,12 @@
     "title": "Instruments",
     "section": "Download dataset",
     "text": "Download dataset\n\n Download .csv file"
+  },
+  {
+    "objectID": "tab-institutions/index.html#how-to-cite",
+    "href": "tab-institutions/index.html#how-to-cite",
+    "title": "Instruments",
+    "section": "How to Cite",
+    "text": "How to Cite\n\n How to Cite\n\n\n\nCitation\n\n\nMoeckli, Daniel. (Forthcoming) Add Title. Add Journal, 0(0).\n\n\nBibTeX\n\n\n@article{moeckli_d_forthcoming,\n  author = {Moeckli, Daniel},\n  title = {Title},\n  journal = {Add Journal},\n  volume = {0},\n  number = {0},\n  year = {Forthcoming},\n  doi = {},\n}"
   }
 ]
