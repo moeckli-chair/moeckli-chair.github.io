@@ -49,7 +49,7 @@ Slightly over 70 percent of the Council of Europe member states (33 out of 46) p
 
 Out of the 57 bottom-up instruments that exist in the Council of Europe member states, 17 could not be included in our database. Some instruments could not be included due to the absence of implementation. For example, although the Greek constitution was amended to provide for an AI in 2019, the law required to implement this instrument has not been passed yet. Other instruments were not included because it was impossible to find any information (e.g. for the AI in Armenia), or we considered the information we identified to be unreliable (e.g. for the PI in Poland). Our database thus contains information on 40 instruments.
 
-We applied an inclusion criterion that led to the removal of further eight instruments. Since our empirical goal is to map initiative practice in terms of trends and various outcomes, we excluded those instruments that have been used fewer than five times during the 31 years covered. Where citizens’ initiatives are launched so rarely, there is no meaningful practice to be analysed. This applied to the PI in Albania (n=1), Portugal (n=3), and Serbia (n=2); the RI in Albania (n=2), Luxembourg (n=1), and Malta (n=1); and the AI in Azerbaijan (n=1) and Liechtenstein (n=2). The [Supplemental Material](data/supplemental_material.pdf) provides full details on the instruments that did not satisfy the inclusion criteria as well as those that were included. It also provides details on the cases that were included despite only partial data being available. 
+We applied an inclusion criterion that led to the removal of further eight instruments. Since our empirical goal is to map initiative practice in terms of trends and various outcomes, we excluded those instruments that have been used fewer than five times during the 31 years covered. Where citizens’ initiatives are launched so rarely, there is no meaningful practice to be analysed. This applied to the PI in Albania (n=1), Portugal (n=3), and Serbia (n=2); the RI in Albania (n=2), Luxembourg (n=1), and Malta (n=1); and the AI in Azerbaijan (n=1) and Liechtenstein (n=2). The [Supplemental Material](https://raw.githubusercontent.com/moeckli-chair/moeckli-chair.github.io/main/data/supplemental_material.pdf) provides full details on the instruments that did not satisfy the inclusion criteria as well as those that were included. It also provides details on the cases that were included despite only partial data being available. 
 
 Overall, our database includes information on how 32 bottom-up instruments of direct democracy  have been used in practice, yielding a total of 6,874 citizens’ initiatives launched between 1990 and 2020\.
 
@@ -228,7 +228,7 @@ reactable(
 
 ## Codebook
 
-The codebook and further information on data collection is available by accessing the [Supplemental Material](data/supplemental_material.pdf) file.
+The codebook and further information on data collection is available by accessing the [Supplemental Material](https://raw.githubusercontent.com/moeckli-chair/moeckli-chair.github.io/main/data/supplemental_material.pdf) file.
 
 <!-- <button class="btn btn-primary" onclick="downloadCSV()"> -->
 <!--   <i class="bi bi-download"></i> Download Codebook -->
