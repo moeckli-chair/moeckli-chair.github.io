@@ -82,9 +82,3 @@ definitions_table %>%
 )
 
 ```
-
-
-## Summaries
-
-To be added !!
-
