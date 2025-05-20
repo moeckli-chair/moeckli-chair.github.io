@@ -32,7 +32,7 @@
     "href": "tab-institutions/index.html#how-to-cite",
     "title": "Instruments",
     "section": "How to Cite",
-    "text": "How to Cite\n\n How to Cite\n\n\n\nCitation\n\n\nMoeckli, Daniel. (Forthcoming) Add Title. Add Journal, 0(0).\n\n\nBibTeX\n\n\n@article{moeckli_d_forthcoming,\n  author = {Moeckli, Daniel},\n  title = {Title},\n  journal = {Add Journal},\n  volume = {0},\n  number = {0},\n  year = {Forthcoming},\n  doi = {},\n}"
+    "text": "How to Cite\n\n How to Cite\n\n\n\nCitation\n\n\nDaniel Moeckli, (2025) Beyond the Reach of the People? Admissibility Requirements and Procedures for Citizens’ Initiatives in Comparative Perspective, 21 European Constitutional Law Review, 1-44.\n\n\nBibTeX\n\n\n@article{moeckli_d_forthcoming,\n  author = {Moeckli, Daniel},\n  title = {Beyond the Reach of the People? Admissibility Requirements and Procedures for Citizens' Initiatives in Comparative Perspective},\n  journal = {Add Journal},\n  volume = {0},\n  number = {0},\n  year = {2025},\n  doi = {https://doi.org/10.1017/S1574019625000100},\n}"
   },
   {
     "objectID": "tab-mapping/index.html",
