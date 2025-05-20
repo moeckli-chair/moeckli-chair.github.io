@@ -318,7 +318,7 @@ async function downloadCSV() {
 
 <div id="citation-popup" style="display: none; margin-top: 15px; padding: 15px; background-color: #f8f9fa; border-radius: 5px; border: 1px solid #dee2e6;">
   <h4>Citation</h4>
-  <p>Moeckli, Daniel., Mendez, Fernando., Labud, Mara., and Reimann, Nils. (Forthcoming) Mapping the European Landscape of Citizens’ Initiatives. <em>Political Studies</em>, 0(0).</p>
+  <p>Daniel Moeckli, Fernando Mendez, Mara Labud, Nils Reimann, (2025) [Mapping the European Landscape of Citizens' Initiatives](https://doi.org/10.1177/00323217251334530), 73, Political Studies*/p>
   
   <h4>BibTeX</h4>
   <div>
@@ -327,10 +327,10 @@ async function downloadCSV() {
   author = {Moeckli, Daniel., Mendez, Fernando., Labud, Mara., and Reimann, Nils},
   title = {Mapping the European Landscape of Citizens’ Initiatives},
   journal = {Political Studies},
-  volume = {0},
+  volume = {73},
   number = {0},
-  year = {Forthcoming},
-  doi = {},
+  year = {2025},
+  doi = {https://doi.org/10.1177/00323217251334530},
 }
 ```
   </div>
