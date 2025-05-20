@@ -281,19 +281,19 @@ async function downloadCSV() {
 
 <div id="citation-popup" style="display: none; margin-top: 15px; padding: 15px; background-color: #f8f9fa; border-radius: 5px; border: 1px solid #dee2e6;">
   <h4>Citation</h4>
-  <p>Moeckli, Daniel. (Forthcoming) Add Title. <em>Add Journal</em>, 0(0).</p>
+  <p>Daniel Moeckli, (2025) [Beyond the Reach of the People? Admissibility Requirements and Procedures for Citizens’ Initiatives in Comparative Perspective]( https://doi.org/10.1017/S1574019625000100), 21 European Constitutional Law Review, 1-44.</p>
   
   <h4>BibTeX</h4>
   <div>
 ```bibtex
 @article{moeckli_d_forthcoming,
   author = {Moeckli, Daniel},
-  title = {Title},
+  title = {Beyond the Reach of the People? Admissibility Requirements and Procedures for Citizens' Initiatives in Comparative Perspective},
   journal = {Add Journal},
   volume = {0},
   number = {0},
-  year = {Forthcoming},
-  doi = {},
+  year = {2025},
+  doi = {https://doi.org/10.1017/S1574019625000100},
 }
 ```
   </div>
