@@ -24,15 +24,15 @@ Our work on direct democracy aligns with the Chair's overall research agenda to 
 
 ## Publications
 
-Daniel Moeckli, Fernando Mendez, Mara Labud, Nils Reimann, (2025) [Mapping the European Landscape of Citizens' Initiatives](https://journals.sagepub.com/doi/10.1177/00323217251334530), 73 *Political Studies*
+Daniel Moeckli, Fernando Mendez, Mara Labud, Nils Reimann, (2025) [Mapping the European Landscape of Citizens' Initiatives](https://doi.org/10.1177/00323217251334530), 73 *Political Studies*
 
-Daniel Moeckli, (2025) [Beyond the Reach of the People? Admissibility Requirements and Procedures for Citizens’ Initiatives in Comparative Perspective](https://www.cambridge.org/core/journals/european-constitutional-law-review/article/beyond-the-reach-of-the-people-admissibility-requirements-and-procedures-for-citizens-initiatives-in-comparative-perspective/EF7C61B5CF7FFC81CFB631E1754AD569), 21 *European Constitutional Law Review*, 1-44
+Daniel Moeckli, (2025) [Beyond the Reach of the People? Admissibility Requirements and Procedures for Citizens’ Initiatives in Comparative Perspective](https://doi.org/10.1017/S1574019625000100), 21 *European Constitutional Law Review*, 1-44
 
 Daniel Moeckli, (2022) [Das populistische Verständnis von (direkter) Demokratie als Herausforderung für den Rechtsstaat](https://www.ivr.uzh.ch/dam/jcr:dd495331-4ac4-437c-a5fa-fadc5a9861aa/Moeckli_ZSR-I_2022-05_pdf.pdf), 141 *Zeitschrift für Schweizerisches Recht*, 593-610 
 
-Daniel Moeckli, (2018) [Referendums: Tyranny of the Majority?](https://onlinelibrary.wiley.com/doi/epdf/10.1111/spsr.12317), 24(3) Swiss Political Science Review, 335-341
+Daniel Moeckli/Anna Forgács/Henri Ibi (2021) (eds), [*The Legal Limits of Direct Democracy: A Comparative Analysis of Referendums and Initiatives across Europe*](https://www.elgaronline.com/edcollbook-oa/edcoll/9781800372795/9781800372795.xml) (Cheltenham: Edward Elgar) 
 
-Daniel Moeckli/Anna Forgács/Henri Ibi (2021) (eds), [*The Legal Limits of Direct Democracy: A Comparative Analysis of Referendums and Initiatives across Europe*](https://www.elgaronline.com/edcollbook-oa/edcoll/9781800372795/9781800372795.xml) (Cheltenham: Edward Elgar)  
+Daniel Moeckli, (2018) [Referendums: Tyranny of the Majority?](https://onlinelibrary.wiley.com/doi/epdf/10.1111/spsr.12317), 24(3) *Swiss Political Science Review*, 335-341  
 
 
 ::: {.footer style="text-align: left; padding: 1rem; margin-top: 10rem;"}
