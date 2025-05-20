@@ -1,5 +1,40 @@
 [
   {
+    "objectID": "tab-institutions/index.html",
+    "href": "tab-institutions/index.html",
+    "title": "Instruments",
+    "section": "",
+    "text": "This setion of the website provides access to key data on the legal regulation of the various types of direct-democratic instruments that exist at the national level across the 46 member states of the Council of Europe."
+  },
+  {
+    "objectID": "tab-institutions/index.html#explore-data",
+    "href": "tab-institutions/index.html#explore-data",
+    "title": "Instruments",
+    "section": "Explore data",
+    "text": "Explore data\nWe distinguish between seven types of instruments of direct democracy. Our basic unit of analysis is the Country * Instrument combination. For each Country * Instrument combination, we have collected information on between 42 and 72 items, depending on the instrument. For further information on the items and definitions see the Codebook section. This produces a stacked dataset where a country row is repeated for each instrument provided for. Below, you can explore the data by instrument and by country.\n\nBy Instrument\n\n\n\n\n\n\nView data\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBy Country\n\n\n\n\n\n\nView data"
+  },
+  {
+    "objectID": "tab-institutions/index.html#codebook",
+    "href": "tab-institutions/index.html#codebook",
+    "title": "Instruments",
+    "section": "Codebook",
+    "text": "Codebook\nThe database is structured according to a detailed list of items for each instrument. You can view the list of items and defintions in the box below or download the codebook as a .csv file.\n\n\n\n\n\n\nItems and Definitions"
+  },
+  {
+    "objectID": "tab-institutions/index.html#download-dataset",
+    "href": "tab-institutions/index.html#download-dataset",
+    "title": "Instruments",
+    "section": "Download dataset",
+    "text": "Download dataset\n\n Download .csv file"
+  },
+  {
+    "objectID": "tab-institutions/index.html#how-to-cite",
+    "href": "tab-institutions/index.html#how-to-cite",
+    "title": "Instruments",
+    "section": "How to Cite",
+    "text": "How to Cite\n\n How to Cite\n\n\n\nCitation\n\n\nMoeckli, Daniel. (Forthcoming) Add Title. Add Journal, 0(0).\n\n\nBibTeX\n\n\n@article{moeckli_d_forthcoming,\n  author = {Moeckli, Daniel},\n  title = {Title},\n  journal = {Add Journal},\n  volume = {0},\n  number = {0},\n  year = {Forthcoming},\n  doi = {},\n}"
+  },
+  {
     "objectID": "tab-mapping/index.html",
     "href": "tab-mapping/index.html",
     "title": "Initiatives",
@@ -88,41 +123,6 @@
     "href": "index.html#publications",
     "title": "Our research on direct democracy",
     "section": "Publications",
-    "text": "Publications\nDaniel Moeckli, Das populistische Verständnis von (direkter) Demokratie als Herausforderung für den Rechtsstaat, 141 (2022) Zeitschrift für Schweizerisches Recht, 593-610\nDaniel Moeckli, Referendums: Tyranny of the Majority?, (2018) 24(3) Swiss Political Science Review, 335-341\nDaniel Moeckli/Anna Forgács/Henri Ibi (eds), The Legal Limits of Direct Democracy: A Comparative Analysis of Referendums and Initiatives across Europe (Cheltenham: Edward Elgar) (2021)\n\n© 2025 moeckli-chair. All rights reserved. | Privacy Policy | Terms of Service"
-  },
-  {
-    "objectID": "tab-institutions/index.html",
-    "href": "tab-institutions/index.html",
-    "title": "Instruments",
-    "section": "",
-    "text": "This setion of the website provides access to key data on the legal regulation of the various types of direct-democratic instruments that exist at the national level across the 46 member states of the Council of Europe."
-  },
-  {
-    "objectID": "tab-institutions/index.html#explore-data",
-    "href": "tab-institutions/index.html#explore-data",
-    "title": "Instruments",
-    "section": "Explore data",
-    "text": "Explore data\nWe distinguish between seven types of instruments of direct democracy. Our basic unit of analysis is the Country * Instrument combination. For each Country * Instrument combination, we have collected information on between 42 and 72 items, depending on the instrument. For further information on the items and definitions see the Codebook section. This produces a stacked dataset where a country row is repeated for each instrument provided for. Below, you can explore the data by instrument and by country.\n\nBy Instrument\n\n\n\n\n\n\nView data\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBy Country\n\n\n\n\n\n\nView data"
-  },
-  {
-    "objectID": "tab-institutions/index.html#codebook",
-    "href": "tab-institutions/index.html#codebook",
-    "title": "Instruments",
-    "section": "Codebook",
-    "text": "Codebook\nThe database is structured according to a detailed list of items for each instrument. You can view the list of items and defintions in the box below or download the codebook as a .csv file.\n\n\n\n\n\n\nItems and Definitions"
-  },
-  {
-    "objectID": "tab-institutions/index.html#download-dataset",
-    "href": "tab-institutions/index.html#download-dataset",
-    "title": "Instruments",
-    "section": "Download dataset",
-    "text": "Download dataset\n\n Download .csv file"
-  },
-  {
-    "objectID": "tab-institutions/index.html#how-to-cite",
-    "href": "tab-institutions/index.html#how-to-cite",
-    "title": "Instruments",
-    "section": "How to Cite",
-    "text": "How to Cite\n\n How to Cite\n\n\n\nCitation\n\n\nMoeckli, Daniel. (Forthcoming) Add Title. Add Journal, 0(0).\n\n\nBibTeX\n\n\n@article{moeckli_d_forthcoming,\n  author = {Moeckli, Daniel},\n  title = {Title},\n  journal = {Add Journal},\n  volume = {0},\n  number = {0},\n  year = {Forthcoming},\n  doi = {},\n}"
+    "text": "Publications\nDaniel Moeckli, Fernando Mendez, Mara Labud, Nils Reimann, (2025) Mapping the European Landscape of Citizens’ Initiatives, 73 Political Studies\nDaniel Moeckli, (2025) Beyond the Reach of the People? Admissibility Requirements and Procedures for Citizens’ Initiatives in Comparative Perspective, 21 European Constitutional Law Review, 1-44\nDaniel Moeckli, (2022) Das populistische Verständnis von (direkter) Demokratie als Herausforderung für den Rechtsstaat, 141 Zeitschrift für Schweizerisches Recht, 593-610\nDaniel Moeckli, (2018) Referendums: Tyranny of the Majority?, 24(3) Swiss Political Science Review, 335-341\nDaniel Moeckli/Anna Forgács/Henri Ibi (2021) (eds), The Legal Limits of Direct Democracy: A Comparative Analysis of Referendums and Initiatives across Europe (Cheltenham: Edward Elgar)\n\n© 2025 moeckli-chair. All rights reserved. | Privacy Policy | Terms of Service"
   }
 ]
