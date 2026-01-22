@@ -1,9 +1,0 @@
----
-title: "Development Dashboard"
----
-
-<iframe src="https://cohesify.cut.ac.cy:5601/app/dashboards#/view/be8fbad0-f0b6-11f0-b90d-85e6930cc5b3?embed=true&_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:now-8y,to:now))" 
-        width="100%" 
-        height="850px" 
-        style="border: none;">
-</iframe>
