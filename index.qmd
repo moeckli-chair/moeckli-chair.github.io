@@ -36,5 +36,5 @@ Daniel Moeckli, (2018) [Referendums: Tyranny of the Majority?](https://onlinelib
 
 
 ::: {.footer style="text-align: left; padding: 1rem; margin-top: 10rem;"}
-© 2026 moeckli-chair. All rights reserved. | [Privacy Policy](#) | [Terms of Service](#)
+© 2026 moeckli-chair. All rights reserved. | [Privacy Policy](#) | [Terms of Service](#) | [Internal](pages/cid_01.html)
 :::
