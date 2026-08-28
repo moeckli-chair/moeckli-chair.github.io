@@ -36,7 +36,7 @@ Daniel Moeckli, (2018) [Referendums: Tyranny of the Majority?](https://onlinelib
 
 
 ::: {.footer style="text-align: left; padding: 1rem; margin-top: 10rem;"}
-© 2026 moeckli-chair. All rights reserved. | [Privacy Policy](#) | [Terms of Service](#) | <a href="https://demotec.cut.ac.cy/fernando/frontend/" target="_blank">Internal</a>
+© 2026 moeckli-chair. All rights reserved. | [Privacy Policy](#) | [Terms of Service](#) | <a href="https://cohesify.cut.ac.cy:8080/fernando/shinyapps-frontend/" target="_blank">Internal</a>
 
 <!-- https://cohesify.cut.ac.cy:5601/app/dashboards#/view/be8fbad0-f0b6-11f0-b90d-85e6930cc5b3?embed=true&_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:now-16y,to:now)) -->
 :::
